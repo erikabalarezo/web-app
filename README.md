@@ -59,9 +59,60 @@ The makings of this application will be an interesting challenge. Not only I wil
 	It has some features I will include, i.e. display data by date and category. 
 	The scope of my web app is narrower: It’s targeted to families with children. It will display all the events on a list only and is in English.
 
+3.	[OttawaFun](http://www.ottawafun.ca/)
+
+	This web app displays on a list Ottawa public locations such as museums, pools, parks and others. The list displays one category at a time. Next to the list, a map displays all the locations of that category.  
 	
+	Selecting a location on the map displays a label with address detail and links for writing a review and to get directions.
+	
+	**Differences**
+	
+	My app will include not only Ottawa public locations but also events for families.
+	It will not display all the loctions/events on a map. The map option will be shown for one specific location/event selected.
 
+4.	Ottawa Events
 
+	Is a free app for iPhones and displays events happening in the city on a list. Once the event is clicked the event is shown on a map with an icon and a label on top. Details of the location are shown after touching the label. It uses different data sources including the City of Ottawa.
 
+	**Differences**
+	
+	My app will be showing events on a list as well, but the scope is smaller since it will include only family events. Another difference will be that events will be rated and there will be additional icons to show if the events is free or not. My app will be a web app.
 
+## User Research
+	
+Ottawa For Families is oriented for families with children who live or visit Ottawa and who have access to mobile devices or desktops.
+	
+There are many apps that provide info about Ottawa public locations and the events happening in Ottawa but there aren’t too many specific for families with children.
+	
+With this app, families can find locations/events quickly, in an organized manner and spend a fun day.
 
+### Hoss-Domenech Family
+	
+![Hoss-Domenech Family] their website
+	
+The Hoss Domenech Family includes Norma, Bart and their children David (8 years old) and Sophia (5 years old).
+
+Norma is a public servant who works at
+	
+Bart is a software developer who works for Sienna Technologies.
+	
+The Hoss Domenech family has a hectic schedule during the week. With both parents working full time there is little time for planning too much ahead for fun things to do, especially on the weekends.
+
+The Hoss-Domenech family:
+-	Likes doing things spare of the moment.
+-	Is musical, Bart plays piano and violin and little David is learning piano. Norma likes listening to music a lot.
+-	Likes entertaining and going out.
+-	Is computer literate. Norma loves Photoshop and her main hobby is photography. Bart’s hobbies includes building websites. Norma and Bart both have access to mobile devices.
+
+#### Motivations for using this type of app
+
+-	Having up to date and quick access to locations and events specifically for families when they spontaneously decide to go out is very convenient.
+-	The Hoss-Domenech believes that family time is very important and wants to do activities together.
+-	Entertaining kids at home a good part of the day is not always easy. Going out with the children makes their day go by faster.
+-	The kids get bored if spending too long in the house and need to spend their energy doing something fun, out of the ordinary.
+-	Learning while having fun, going out.
+
+#### Demotivations for using this type of app.
+-	A slow app.
+-	A poorly accessible app.
+-	Other issues not related to the app: Unable to go out (i.e. weather conditions, sickness, homework, etc)
