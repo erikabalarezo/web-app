@@ -88,7 +88,9 @@ With this app, families can find locations/events quickly, in an organized manne
 
 ### Hoss-Domenech Family
 	
-![Hoss-Domenech Family] their website
+![Hoss-Domenech Family](www.Hos.ca)
+
+ their website
 	
 The Hoss Domenech Family includes Norma, Bart and their children David (8 years old) and Sophia (5 years old).
 
