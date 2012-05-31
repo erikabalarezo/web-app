@@ -9,7 +9,6 @@ Data sources:
 - [Ottawa Open Data](http://ottawa.ca/online_services/opendata/)
 - [Eventbrite](http://www.eventbrite.com/)
 
-
 ### Features
 
 -	Displays all the family oriented city locations as well as public events on a list.
@@ -34,7 +33,7 @@ The makings of this application will be an interesting challenge. Not only I wil
 -	Mobile first and responsive web design.
 -	Google Maps API.  
 	PHP, because it is the most popular language used to write web applications and also because there is good documentation.
--	Will use PHP on Google App Engine via a version of Quercus. Since Google App Engine offers automatic scaling for web applications I won't have to worry about managing machines if my app's traffic and data storage grow.
+-	PHP on Google App Engine via a version of Quercus. Since Google App Engine offers automatic scaling for web applications I won't have to worry about managing machines if my app's traffic and data storage grow.
 	Python, as the other alternative, because it's a popular language with excellent readability that encourages elegant code. Python is used as the main programming language of Google.
 -	MySql.
 
@@ -122,12 +121,13 @@ The Hoss-Domenech family:
 #### Motivations for using this type of app
 
 -	Having up to date and quick access to locations and events specifically for families when they spontaneously decide to go out is very convenient.
--	The Hoss-Domenech believes that family time is very important and wants to do activities together.
+-	The Hos-Domenech believes that family time is very important and wants to do activities together.
 -	Entertaining kids at home a good part of the day is not always easy. Going out with the children makes their day go by faster.
 -	The kids get bored if spending too long in the house and need to spend their energy doing something fun, out of the ordinary.
 -	Learning while having fun, going out.
 
 #### Demotivations for using this type of app.
+
 -	A slow app.
 -	A poorly accessible app.
--	Other issues not related to the app: Unable to go out (i.e. weather conditions, sickness, homework, etc)
+-	Other issues not related to the app: Unable to go out (i.e. weather conditions, sickness, work, etc)
