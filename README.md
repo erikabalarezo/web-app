@@ -19,12 +19,12 @@ Data sources:
 -	Detail information for each location or event selected: Duration, for how long, contact info, and location on a map.
 -	Ability to input the date to access locations/events available.
 
-## Learning Goals
+## Learning Goals  
 
 -	Learn how to deal with Open Data and other data sources.
--	Learn more about jQuery and PHP programming as well as databases.
+-	Learn more about jQuery and PHP programming as well as MySql and databases.
 -	Apply accessibility and responsive design concepts previously learned and learn more about them.
--	Learn about using Google Maps for building web applications
+-	Learn about using Google Maps for building web applications.
 -	Use and learn more about developement and post-launch tools (i.e Visual Event, Javascriptcompressor, JSHint, CSS Compressor)
 
 The makings of this application will be an interesting challenge. Not only I will apply previous learned concepts but also I will acquire new ones in a short period of time. The most exciting part is the fact that it will be something real that can be used by many people today. 
@@ -33,10 +33,11 @@ The makings of this application will be an interesting challenge. Not only I wil
 
 -	Mobile first and responsive web design.
 -	Google Maps API.  
-	PHP, because it is the most popular language used to write web applications and also because there is good documentation.
 -	Will use PHP, because it is the most popular language used to write web applications and also because there is good documentation.
 -	Will use PHP on Google App Engine via a version of Quercus. Since Google App Engine offers automatic scaling for web applications I won't have to worry about managing machines if my app's traffic and data storage grow.
 -	MySql.
+-	Offline technology, HTML5 appcache. By caching resources it's possible to seriously decrease the load time for the app, particularly on a visitors subsequent visits. 
+-	Eventbrite API.
 
 ## Similar Applications
 
@@ -81,13 +82,14 @@ The makings of this application will be an interesting challenge. Not only I wil
 	My app will include not only Ottawa public locations but also events for families.
 	It will not display all the loctions/events on a map. The map option will be shown for one specific location/event selected.
 
-4.	[Ottawa Events](http://itunes.apple.com/ca/app/ottawa-events/id410644884?mt=8)
+4.	[Ottawa Events](http://ottawaeventsapp.com/)
 
-	Is a free app for iPhones and displays events happening in the city on a list. Once the event is clicked the event is shown on a map with an icon and a label on top. Details of the location are shown after touching the label. It uses different data sources including the City of Ottawa.
+	Is a free app for iPhones and displays events happening in the city on a list. The event selected is shown on a map with an icon and a label on top. Details of the location are shown after touching the label. It uses different data sources not including the Ottawa Open Data.
 
 	**Differences**
 	
-	My app will be showing events on a list as well, but the scope is smaller since it will include only family events. Another difference will be that events will be rated and there will be additional icons to show if the events is free or not. My app will be a web app.
+	This app only shows events. My app will include not only events but also City of Ottawa public locations.
+	The results of my app will be shown like this app on a list, but the scope is smaller since it will include only family events. Another difference will be that locations/events will be rated and there will be icons to show if the events is free or not. My app will be a web app.
 
 ## User Research
 	
@@ -132,4 +134,4 @@ The Hoss-Domenech family:
 -	If the app is slow.
 -	If the app is poorly accessible.
 -	If the app displays inaccurate or outdated info.
--	Other issues not related to the app: Unable to go out (i.e. weather conditions, sickness, work, etc)
+-	Unrelated issues: Unable to go out (i.e. weather conditions, sickness, work, etc)
