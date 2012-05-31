@@ -60,9 +60,7 @@ The makings of this application will be an interesting challenge. Not only I wil
 	
 	Similar to events, the locations of museums, parks, sports and recreational information is displayed in a list or a map.
 
-	Other features include the directions function and StreetView function.
-	
-	Some information displayed is in French.
+	Other features include the directions function and StreetView function. Some information displayed is in French.
 	
 	This is a very thorough app with many detailed features many of them displayed at once on a page. It’s a bit overwhelming.
 
