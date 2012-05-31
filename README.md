@@ -25,6 +25,7 @@ Data sources:
 -	Learn more about jQuery and PHP programming as well as MySql and databases.
 -	Apply accessibility and responsive design concepts previously learned and learn more about them.
 -	Learn about using Google Maps for building web applications.
+-	Learn about Offline technology, HTML5 appcache.
 -	Use and learn more about developement and post-launch tools (i.e Visual Event, Javascriptcompressor, JSHint, CSS Compressor)
 
 The makings of this application will be an interesting challenge. Not only I will apply previous learned concepts but also I will acquire new ones in a short period of time. The most exciting part is the fact that it will be something real that can be used by many people today. 
