@@ -99,11 +99,9 @@ There are many apps that provide info about Ottawa public locations and the even
 	
 With this app, families can find locations/events quickly, in an organized manner and spend a fun day.
 
-### Hos-Domenech Family
-	
-![Hos-Domenech Family](http://www.hos.ca/)
+### Hos-Domenech Family  
 
-The Hos-Domenech Family is made up by Norma, Bart and their children David (7 years old) and Sophia (5 years old).
+The [Hos-Domenech Family](http://www.hos.ca/) is made up by Norma, Bart and their children David (7 years old) and Sophia (5 years old).
 
 Norma is a public servant who works at Infrastructure Canada as a Policy Analyst. She has been employed in the public sector for over 12 years. Bart is a software developer who works for Ciena Technologies. He has been involved in the high technology industry since he graduated as an Electrical engineer and has worked for different private companies.
 
