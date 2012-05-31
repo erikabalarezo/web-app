@@ -17,6 +17,7 @@ Data sources:
 -	Colored icons for different categories, rates, cost (free or paid).
 -	Colored time bar for each location/event. The length of each bar depends on the time that the location/event is available or lasts during the day.
 -	Detail information for each location or event selected: Duration, for how long, contact info, and location on a map.
+-	Ability to input the date to access locations/events available.
 
 ## Learning Goals
 
@@ -118,7 +119,7 @@ The Hoss-Domenech family:
 -	Is computer literate. Norma enjoys digital photography and has mastered a number of photo editing software to work with her photographs. Bart's hobbies include building websites for personal and business uses.
 	Norma and Bart, both, have access to mobile devices.
 
-#### Motivations for using this type of app
+#### Motivations for using the app
 
 -	Having up to date and quick access to locations and events specifically for families when they spontaneously decide to go out is very convenient.
 -	The Hos-Domenech believes that family time is very important and wants to do activities together.
@@ -126,8 +127,9 @@ The Hoss-Domenech family:
 -	The kids get bored if spending too long in the house and need to spend their energy doing something fun, out of the ordinary.
 -	Learning while having fun, going out.
 
-#### Demotivations for using this type of app.
+#### Demotivations for using the app.
 
--	A slow app.
--	A poorly accessible app.
+-	If the app is slow.
+-	If the app is poorly accessible.
+-	If the app displays inaccurate or outdated info.
 -	Other issues not related to the app: Unable to go out (i.e. weather conditions, sickness, work, etc)
