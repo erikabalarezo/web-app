@@ -2,30 +2,41 @@ web-app
 =======
 # Ottawa For Families
 
-Ottawa For Families is a fun and easy to manage application that allows users to find family oriented  locations or events in Ottawa. It is oriented to all families with children. It is accessible for mobile devices and also desktops. It uses Ottawa Open Data as well as information from local businesses WHERE TO GET THE DATA FROM??? 
+Ottawa For Families is a fun and easy to manage application that allows users to find family oriented  locations or events in Ottawa. It is oriented to all families with children. It is accessible for mobile devices and also desktops. 
+
+Data sources: 
+
+- [Ottawa Open Data](http://ottawa.ca/online_services/opendata/)
+- [Eventbrite](http://www.eventbrite.com/)
+
 
 ### Features
 
 -	Displays all the family oriented city locations as well as public events on a list.
 -	Information displayed is for a specific date.
 -	Locations and events are organized by categories.
--	Colored icons for different categories, rates, cost (free or paid), TIME???.
--	Detail information for each location/event selected: Duration, for how long and location on a map.
+-	Colored icons for different categories, rates, cost (free or paid).
+-	Colored time bar for each location/event. The length of each bar depends on the time that the location/event is available or lasts during the day.
+-	Detail information for each location or event selected: Duration, for how long, contact info, and location on a map.
 
 ## Learning Goals
 
--	Learn how to deal with Open Data as well as OTHER DATA?
--	Learn more about jQuery programming and databases.
+-	Learn how to deal with Open Data and other data sources.
+-	Learn more about jQuery and PHP programming as well as databases.
 -	Apply accessibility and responsive design concepts previously learned and learn more about them.
 -	Learn about using Google Maps for building web applications
+-	Use and learn more about developement and post-launch tools (i.e Visual Event, Javascriptcompressor, JSHint, CSS Compressor)
 
 The makings of this application will be an interesting challenge. Not only I will apply previous learned concepts but also I will acquire new ones in a short period of time. The most exciting part is the fact that it will be something real that can be used by many people today. 
 
 ### Technologies & techniques
--	Mobile first and responsive web design.
--	Google Map integration.
--	??????????-------------NO SE EL RESTO
 
+-	Mobile first and responsive web design.
+-	Google Maps API.  
+	PHP, because it is the most popular language used to write web applications and also because there is good documentation.
+-	Will use PHP on Google App Engine via a version of Quercus. Since Google App Engine offers automatic scaling for web applications I won't have to worry about managing machines if my app's traffic and data storage grow.
+	Python, as the other alternative, because it's a popular language with excellent readability that encourages elegant code. Python is used as the main programming language of Google.
+-	MySql.
 
 ## Similar Applications
 
@@ -70,7 +81,7 @@ The makings of this application will be an interesting challenge. Not only I wil
 	My app will include not only Ottawa public locations but also events for families.
 	It will not display all the loctions/events on a map. The map option will be shown for one specific location/event selected.
 
-4.	Ottawa Events
+4.	[Ottawa Events](http://itunes.apple.com/ca/app/ottawa-events/id410644884?mt=8)
 
 	Is a free app for iPhones and displays events happening in the city on a list. Once the event is clicked the event is shown on a map with an icon and a label on top. Details of the location are shown after touching the label. It uses different data sources including the City of Ottawa.
 
@@ -86,25 +97,27 @@ There are many apps that provide info about Ottawa public locations and the even
 	
 With this app, families can find locations/events quickly, in an organized manner and spend a fun day.
 
-### Hoss-Domenech Family
+### Hos-Domenech Family
 	
-![Hoss-Domenech Family](www.Hos.ca)
+![Hos-Domenech Family](www.Hos.ca)
 
- their website
-	
-The Hoss Domenech Family includes Norma, Bart and their children David (8 years old) and Sophia (5 years old).
+The Hos-Domenech Family is made up by Norma, Bart and their children David (7 years old) and Sophia (5 years old).
 
-Norma is a public servant who works at
-	
-Bart is a software developer who works for Sienna Technologies.
-	
-The Hoss Domenech family has a hectic schedule during the week. With both parents working full time there is little time for planning too much ahead for fun things to do, especially on the weekends.
+Norma is a public servant who works at Infrastructure Canada as a Policy Analyst. She has been employed in the public sector for over 12 years. Bart is a software developer who works for Ciena Technologies. He has been involved in the high technology industry since he graduated as an Electrical engineer and has worked for different private companies.
+
+The Hos-Domenech family manage a very hectic schedule during the week, as Norma and Bart work on a full-time basis. As such, there is little time for planning activities ahead of time, especially on the weekends. 
+
+Activities with the kids during weekends are mostly weather-dependent. 	
 
 The Hoss-Domenech family:
--	Likes doing things spare of the moment.
--	Is musical, Bart plays piano and violin and little David is learning piano. Norma likes listening to music a lot.
--	Likes entertaining and going out.
--	Is computer literate. Norma loves Photoshop and her main hobby is photography. Bart’s hobbies includes building websites. Norma and Bart both have access to mobile devices.
+
+-	Like doing things in the spur of the moment, if the scheduled activities allow the family to do so.
+-	Is active. In the winter, the whole family enjoys time outside skiing, skating, tobogganing. The children also take swimming lessons, piano lessons and ballet.
+	In the summer, outdoor activities change to soccer, biking, tennis, or simply playing in the park with friends from school.
+-	Is musical, Bart composes and records music. He also enjoys playing piano and guitar. Little David and Sophia are taking piano lessons. Norma enjoys dancing and listening to music.
+-	Likes entertaining and to go out.
+-	Is computer literate. Norma enjoys digital photography and has mastered a number of photo editing software to work with her photographs. Bart's hobbies include building websites for personal and business uses.
+	Norma and Bart, both, have access to mobile devices.
 
 #### Motivations for using this type of app
 
