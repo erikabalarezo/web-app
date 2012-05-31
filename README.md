@@ -34,8 +34,8 @@ The makings of this application will be an interesting challenge. Not only I wil
 -	Mobile first and responsive web design.
 -	Google Maps API.  
 	PHP, because it is the most popular language used to write web applications and also because there is good documentation.
--	PHP on Google App Engine via a version of Quercus. Since Google App Engine offers automatic scaling for web applications I won't have to worry about managing machines if my app's traffic and data storage grow.
-	Python, as the other alternative, because it's a popular language with excellent readability that encourages elegant code. Python is used as the main programming language of Google.
+-	Will use PHP, because it is the most popular language used to write web applications and also because there is good documentation.
+-	Will use PHP on Google App Engine via a version of Quercus. Since Google App Engine offers automatic scaling for web applications I won't have to worry about managing machines if my app's traffic and data storage grow.
 -	MySql.
 
 ## Similar Applications
@@ -99,7 +99,7 @@ With this app, families can find locations/events quickly, in an organized manne
 
 ### Hos-Domenech Family
 	
-![Hos-Domenech Family](www.Hos.ca)
+![Hos-Domenech Family](http://www.hos.ca/)
 
 The Hos-Domenech Family is made up by Norma, Bart and their children David (7 years old) and Sophia (5 years old).
 
