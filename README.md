@@ -51,7 +51,7 @@ The makings of this application will be an interesting challenge. Not only I wil
 	**Differences**
 
 	My app will display the locations/events to have fun in a list along with the time that those events are available, like an agenda. It will also rate the activities and tell if the activity is free or not by using icons. A map will be displayed when selecting a specific location/event.  
-	It will use City of Ottawa Open data as well as data from businesses.
+	It will use City of Ottawa Open data as well as other data source for events.
 	
 2.	[OttawaInsideOut](http://www.ottawa-events.ca/Download.html)
 
@@ -68,7 +68,7 @@ The makings of this application will be an interesting challenge. Not only I wil
 
 	**Differences**
 	
-	It is only available for android devices CHECK THIS SAY IT IN OTHER WORDS??. My app will be accessible for mobile devices and desktops. 
+	It is only available for android devices. My app will be accessible for mobile devices and desktops. 
 	It has some features I will include, i.e. display data by date and category. 
 	The scope of my web app is narrower: It’s targeted to families with children. It will display all the events on a list only and is in English.
 
@@ -81,7 +81,7 @@ The makings of this application will be an interesting challenge. Not only I wil
 	**Differences**
 	
 	My app will include not only Ottawa public locations but also events for families.
-	It will not display all the loctions/events on a map. The map option will be shown for one specific location/event selected.
+	It will not display all the locations/events on a map. The map option will be shown for one specific location/event selected.
 
 4.	[Ottawa Events](http://ottawaeventsapp.com/)
 
@@ -90,7 +90,7 @@ The makings of this application will be an interesting challenge. Not only I wil
 	**Differences**
 	
 	This app only shows events. My app will include not only events but also City of Ottawa public locations.
-	The results of my app will be shown like this app on a list, but the scope is smaller since it will include only family events. Another difference will be that locations/events will be rated and there will be icons to show if the events is free or not. My app will be a web app.
+	The results of my app will be shown like this app on a list, but the scope is smaller since it will include only family events. Another difference will be that locations/events will be rated and there will be icons to show if the event is free or not. My app is a web app and available for mobile devices and desktops.
 
 ## User Research
 	
