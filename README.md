@@ -35,7 +35,10 @@ The makings of this application will be an interesting challenge. Not only I wil
 -	Mobile first and responsive web design.
 -	Google Maps API.  
 -	Will use PHP, because it is the most popular language used to write web applications and also because there is good documentation.
--	Will use PHP on Google App Engine via a version of Quercus. Since Google App Engine offers automatic scaling for web applications I won't have to worry about managing machines if my app's traffic and data storage grow.
+-	Paas (Platform as a Service) solution: 
+	-	Option 1: PHP on Pagodabox because, according to reviews, it achieves the goal of getting the code running online quickly and securely. Uses GIT for deployment, supports scaling, databases can be created from the dashboard. Free account with 200mb RAM for free. You need to pay only when you need additional resources.
+	-	Option 2: PHP on PHPFog is also quick and secure. It uses GIT for deployment. Doesn't support auto scaling. It provides a shared database only using PHPMyAdmin. Free six month plan with 100 MB storage and 15GB bandwidth.
+	-	Option 3: PHP on Google App Engine via a version of Quercus. Since Google App Engine offers automatic scaling for web applications I won't have to worry about managing machines if my app's traffic and data storage grow. This option seems a bit complicated, having to install some plugins and also edit some xml files in Quercus to be able to use Google App Engine.
 -	MySql.
 -	Offline technology, HTML5 appcache. By caching resources it's possible to seriously decrease the load time for the app, particularly on a visitors subsequent visits. 
 -	Eventbrite API.
