@@ -1,4 +1,4 @@
-web-app
+Web-app
 =======
 # Ottawa For Families
 
@@ -18,10 +18,11 @@ Data sources:
 -	Colored time bar for each location/event. The length of each bar depends on the time that the location/event is available or lasts during the day.
 -	Detail information for each location or event selected: Duration, for how long, contact info, and location on a map.
 -	Ability to input the date to access locations/events available.  
-
+  
+  
 
 ## Learning Goals  
-
+  
 
 -	Learn how to deal with Open Data and other data sources.
 -	Learn more about jQuery and PHP programming as well as MySql and databases.
@@ -45,7 +46,8 @@ The makings of this application will be an interesting challenge. Not only I wil
 -	MySql.
 -	Offline technology, HTML5 appcache. By caching resources it's possible to seriously decrease the load time for the app, particularly on a visitors subsequent visits. 
 -	Eventbrite API.  
-
+  
+  
 
 ## Similar Applications  
 
@@ -100,9 +102,10 @@ The makings of this application will be an interesting challenge. Not only I wil
 
 
 ## User Research  
+  
+  
 
-
-Ottawa For Families is oriented for families with children who live or visit Ottawa and who have access to mobile devices or desktops.
+Ottawa For Families is oriented to families with children who live or visit Ottawa and who have access to mobile devices or desktops.
 	
 There are many apps that provide info about Ottawa public locations and the events happening in Ottawa but there aren’t too many specific for families with children.
 	
