@@ -2,7 +2,7 @@ web-app
 =======
 # Ottawa For Families
 
-Ottawa For Families is a fun and easy to manage application that allows users to find family oriented  locations or events in Ottawa. It is oriented to all families with children. It is accessible for mobile devices and also desktops. 
+Ottawa For Families is a fun and easy to manage application that allows users to find family-oriented  locations or events in Ottawa. It is oriented to all families with children. It is accessible for mobile devices and also desktops. 
 
 Data sources: 
 
@@ -26,7 +26,7 @@ Data sources:
 -	Apply accessibility and responsive design concepts previously learned and learn more about them.
 -	Learn about using Google Maps for building web applications.
 -	Learn about Offline technology, HTML5 appcache.
--	Use and learn more about developement and post-launch tools (i.e Visual Event, Javascriptcompressor, JSHint, CSS Compressor)
+-	Use and learn more about development and post-launch tools (i.e Visual Event, Javascriptcompressor, JSHint, CSS Compressor)
 
 The makings of this application will be an interesting challenge. Not only I will apply previous learned concepts but also I will acquire new ones in a short period of time. The most exciting part is the fact that it will be something real that can be used by many people today. 
 
@@ -35,7 +35,7 @@ The makings of this application will be an interesting challenge. Not only I wil
 -	Mobile first and responsive web design.
 -	Google Maps API.  
 -	Will use PHP, because it is the most popular language used to write web applications and also because there is good documentation.
--	Paas (Platform as a Service) solution: 
+-	PaaS (Platform as a Service) solution: 
 	-	Option 1: PHP on Pagodabox because, according to reviews, it achieves the goal of getting the code running online quickly and securely. Uses GIT for deployment, supports scaling, databases can be created from the dashboard. Free account with 200mb RAM for free. You need to pay only when you need additional resources.
 	-	Option 2: PHP on PHPFog is also quick and secure. It uses GIT for deployment. Doesn't support auto scaling. It provides a shared database only using PHPMyAdmin. Free six month plan with 100 MB storage and 15GB bandwidth.
 	-	Option 3: PHP on Google App Engine via a version of Quercus. Since Google App Engine offers automatic scaling for web applications I won't have to worry about managing machines if my app's traffic and data storage grow. This option seems a bit complicated, having to install some plugins and also edit some xml files in Quercus to be able to use Google App Engine.
@@ -134,4 +134,4 @@ The Hoss-Domenech family:
 -	If the app is slow.
 -	If the app is poorly accessible.
 -	If the app displays inaccurate or outdated info.
--	Unrelated issues: Unable to go out (i.e. weather conditions, sickness, work, etc)
+-	Unrelated issues: Unable to go out (i.e. weather conditions, sickness, work, etc.)
