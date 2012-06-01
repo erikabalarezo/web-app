@@ -1,4 +1,4 @@
-web-app
+#web-app
 =======
 # Ottawa For Families
 
@@ -7,7 +7,7 @@ Ottawa For Families is a fun and easy to manage application that allows users to
 Data sources: 
 
 - [Ottawa Open Data](http://ottawa.ca/online_services/opendata/)
-- [Eventbrite](http://www.eventbrite.com/)
+- [Eventbrite](http://www.eventbrite.com/)  
 
 ### Features
 
@@ -17,7 +17,8 @@ Data sources:
 -	Colored icons for different categories, rates, cost (free or paid).
 -	Colored time bar for each location/event. The length of each bar depends on the time that the location/event is available or lasts during the day.
 -	Detail information for each location or event selected: Duration, for how long, contact info, and location on a map.
--	Ability to input the date to access locations/events available.
+-	Ability to input the date to access locations/events available.  
+
 
 ## Learning Goals  
 
@@ -30,7 +31,8 @@ Data sources:
 
 The makings of this application will be an interesting challenge. Not only I will apply previous learned concepts but also I will acquire new ones in a short period of time. The most exciting part is the fact that it will be something real that can be used by many people today. 
 
-### Technologies & techniques
+
+### Technologies & techniques  
 
 -	Mobile first and responsive web design.
 -	Google Maps API.  
@@ -41,9 +43,9 @@ The makings of this application will be an interesting challenge. Not only I wil
 	-	Option 3: PHP on Google App Engine via a version of Quercus. Since Google App Engine offers automatic scaling for web applications I won't have to worry about managing machines if my app's traffic and data storage grow. This option seems a bit complicated, having to install some plugins and also edit some xml files in Quercus to be able to use Google App Engine.
 -	MySql.
 -	Offline technology, HTML5 appcache. By caching resources it's possible to seriously decrease the load time for the app, particularly on a visitors subsequent visits. 
--	Eventbrite API.
+-	Eventbrite API.  
 
-## Similar Applications
+## Similar Applications  
 
 1.	[Ottawa For Kids] ( http://www.ottawaforkids.webs.com/)
 	
@@ -93,7 +95,7 @@ The makings of this application will be an interesting challenge. Not only I wil
 	This app only shows events. My app will include not only events but also City of Ottawa public locations.
 	The results of my app will be shown like this app on a list, but the scope is smaller since it will include only family events. Another difference will be that locations/events will be rated and there will be icons to show if the event is free or not. My app is a web app and available for mobile devices and desktops.
 
-## User Research
+## User Research  
 	
 Ottawa For Families is oriented for families with children who live or visit Ottawa and who have access to mobile devices or desktops.
 	
