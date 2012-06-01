@@ -1,4 +1,4 @@
-#web-app
+web-app
 =======
 # Ottawa For Families
 
@@ -21,6 +21,7 @@ Data sources:
 
 
 ## Learning Goals  
+
 
 -	Learn how to deal with Open Data and other data sources.
 -	Learn more about jQuery and PHP programming as well as MySql and databases.
@@ -45,7 +46,9 @@ The makings of this application will be an interesting challenge. Not only I wil
 -	Offline technology, HTML5 appcache. By caching resources it's possible to seriously decrease the load time for the app, particularly on a visitors subsequent visits. 
 -	Eventbrite API.  
 
+
 ## Similar Applications  
+
 
 1.	[Ottawa For Kids] ( http://www.ottawaforkids.webs.com/)
 	
@@ -95,8 +98,10 @@ The makings of this application will be an interesting challenge. Not only I wil
 	This app only shows events. My app will include not only events but also City of Ottawa public locations.
 	The results of my app will be shown like this app on a list, but the scope is smaller since it will include only family events. Another difference will be that locations/events will be rated and there will be icons to show if the event is free or not. My app is a web app and available for mobile devices and desktops.
 
+
 ## User Research  
-	
+
+
 Ottawa For Families is oriented for families with children who live or visit Ottawa and who have access to mobile devices or desktops.
 	
 There are many apps that provide info about Ottawa public locations and the events happening in Ottawa but there aren’t too many specific for families with children.
