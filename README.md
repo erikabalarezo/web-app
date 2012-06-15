@@ -68,19 +68,19 @@ The makings of this application will be an interesting challenge. Not only I wil
 2.	[OttawaInsideOut](http://www.ottawa-events.ca/Download.html)
 
 	This is an Android app. The information is organized by sections. Events can be searched by date or category and there is the option on how the results can be displayed: in a list or a map. 	
-	Events can also be found by location (i.e. specific neighbourhood) using the phone’s GPS. Details of the event include: cost, times, location, contact phone number and a link to the website. 
+	Events can also be found by location (i.e. specific neighbourhood) using the phoneï¿½s GPS. Details of the event include: cost, times, location, contact phone number and a link to the website. 
 	
 	Similar to events, the locations of museums, parks, sports and recreational information is displayed in a list or a map.
 
 	Other features include the directions function and StreetView function. Some information displayed is in French.
 	
-	This is a very thorough app with many detailed features many of them displayed at once on a page. It’s a bit overwhelming.
+	This is a very thorough app with many detailed features many of them displayed at once on a page. Itï¿½s a bit overwhelming.
 
 	**Differences**
 	
 	It is only available for android devices. My app will be accessible for mobile devices and desktops. 
 	It has some features I will include, i.e. display data by date and category. 
-	The scope of my web app is narrower: It’s targeted to families with children. It will display all the events on a list only and is in English.
+	The scope of my web app is narrower: Itï¿½s targeted to families with children. It will display all the events on a list only and is in English.
 
 3.	[OttawaFun](http://www.ottawafun.ca/)
 
@@ -109,7 +109,7 @@ The makings of this application will be an interesting challenge. Not only I wil
 
 Ottawa For Families is oriented to families with children who live or visit Ottawa and who have access to mobile devices or desktops.
 	
-There are many apps that provide info about Ottawa public locations and the events happening in Ottawa but there aren’t too many specific for families with children.
+There are many apps that provide info about Ottawa public locations and the events happening in Ottawa but there arenï¿½t too many specific for families with children.
 	
 With this app, families can find locations/events quickly, in an organized manner and spend a fun day.
 
