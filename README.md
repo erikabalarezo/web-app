@@ -26,7 +26,7 @@ Data sources:
   
 
 -	Learn how to deal with Open Data and other data sources.
--	Learn more about jQuery and PHP programming as well as MySql and databases.
+-	Learn more about jQuery, Ajax, and PHP programming as well as MySql and databases.
 -	Apply accessibility and responsive design concepts previously learned and learn more about them.
 -	Learn about using Google Maps for building web applications.
 -	Learn about Offline technology, HTML5 appcache.
