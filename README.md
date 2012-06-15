@@ -17,7 +17,8 @@ Data sources:
 -	Colored icons for different categories, rates, cost (free or paid).
 -	Colored time bar for each location/event. The length of each bar depends on the time that the location/event is available or lasts during the day.
 -	Detail information for each location or event selected: Duration, for how long, contact info, and location on a map.
--	Ability to input the date to access locations/events available.  
+-	Ability to input the date to access locations/events available.
+-	Ability to rate events.  
   
   
 
@@ -145,4 +146,14 @@ The Hoss-Domenech family:
 -	If the app is slow.
 -	If the app is poorly accessible.
 -	If the app displays inaccurate or outdated info.
--	Unrelated issues: Unable to go out (i.e. weather conditions, sickness, work, etc.)
+-	Unrelated issues: Unable to go out (i.e. weather conditions, sickness, work, etc.)  
+
+
+## Project Phases
+
+
+
+1.	Make sure the app works using Open Data.
+2.	Add more functionality by adding other data, in this case Event Brite.
+3.	Add Google Map functionality.  
+
