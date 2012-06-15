@@ -154,6 +154,6 @@ The Hoss-Domenech family:
 
 
 1.	Make sure the app works using Open Data.
-2.	Add more functionality by adding other data, in this case Event Brite.
+2.	Add more functionality by adding other data, in this case Eventbrite.
 3.	Add Google Map functionality.  
 
