@@ -164,4 +164,8 @@ The Hoss-Domenech family:
 
 
 The Interactive Wireframe, done with [Invision](http://www.invisionapp.com/), is available at: [Ottawa For Families](http://invis.io/854314K4).  
-Since the interactions for every location/event are similar, I've selected the Galleries to demonstrate how the app will work.
+Since the interactions for every location/event are similar, I've selected the Galleries to demonstrate how the app will work.  
+Interactions presented in this wireframe include:  
+- Pressing the buttons: Find, Rate, Map.
+- Collapsing and extending the events displayed for a category (i.e. Galleries, Museums, Entertainment, etc.).
+- Selecting titles (Ottawa For Families or those of locations/events) to allow navigation.
