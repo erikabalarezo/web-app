@@ -157,3 +157,11 @@ The Hoss-Domenech family:
 2.	Add more functionality by adding other data, in this case Eventbrite.
 3.	Add Google Map functionality.  
 
+
+
+## Interactive Wireframe
+
+
+
+The interactive wireframe, done with [invision](http://www.invisionapp.com/), is available at: [Ottawa For Families](http://invis.io/854314K4).
+Since the interactions for every location/event are similar, I've selected the Galleries to demonstrate how the app will work.
