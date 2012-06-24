@@ -163,5 +163,5 @@ The Hoss-Domenech family:
 
 
 
-The interactive wireframe, done with [invision](http://www.invisionapp.com/), is available at: [Ottawa For Families](http://invis.io/854314K4).  
+The Interactive Wireframe, done with [Invision](http://www.invisionapp.com/), is available at: [Ottawa For Families](http://invis.io/854314K4).  
 Since the interactions for every location/event are similar, I've selected the Galleries to demonstrate how the app will work.
