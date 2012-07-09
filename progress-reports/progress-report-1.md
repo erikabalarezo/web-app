@@ -11,7 +11,7 @@ Progress Report 1
 	Yes.  
 	
 3.	Goals for this week  
-	Be able to display the rest of the features for an event: Rating.
+	Be able to display the rest of the features for an event: Rating and Paid details.
 	Now it displays the location name, description, start date, end date.   
 	
 4.	What concepts/techniques did you learn?  
@@ -24,7 +24,7 @@ Progress Report 1
 6.	What parts of the application, in the past, were frustrating?  
 	Beeing able to access data from the database.  	
 	Not being able to write php. I get confused with the code. Don't have concepts clear and don't know how to code.
-	My app uses many nested lists. And going into each level and writing php is confusing.
+	My app uses many nested lists. Going into each level and writing php is confusing.
 	Not being able to work from home since I have different settings for accessing the database. Couldn't move forward.  
 	
 7.	Did you have to radically alter something you'd finished previously?  
