@@ -2,6 +2,10 @@
 
 require_once 'includes/db.php';
 
+$min_start_time = 8;
+$max_end_time = 23;
+$time_diff = $max_end_time - $min_start_time;
+
 $sql = $db->prepare('
 	SELECT id, name
 	FROM off_location
@@ -11,7 +15,7 @@ $sql->execute();
 $locations = $sql->fetchAll();
 
 $sql = $db->prepare('
-	SELECT id, start_date, end_date, name, rate_count, rate_total, paid
+	SELECT id, start_date, end_date, time_start, time_end, name, rate_count, rate_total, paid
 	FROM off_event
 	WHERE location_id = :location_id
 ');
@@ -38,7 +42,8 @@ $sql = $db->prepare('
 	</header>
     
     <div class="locationdetail">
-    	<strong><span class="am">a.m</span><span class="available">Available</span><span class="pm">p.m</span><span class="pay">Pay</span><span class="averagerating">Average Rating</span><span class="yourrating">Your Rating</span>
+    	<strong><span class="am">a.m</span><span class="available">Available</span><span class="pm">p.m</span><span class="pay">Pay</span><span class="averagerating">Average Rating</span>
+        <!--<span class="yourrating">Your Rating</span>-->
     	</strong>
     </div>
     
@@ -49,7 +54,7 @@ $sql = $db->prepare('
             	<?php foreach($locations as $loc) : ?>
                 <li>
                     <div class="item">
-                        <strong class="item-name"><a href="locdescription.php?name=<?php echo $loc['name']; ?>&id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
+                        <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
                         <div class="time-bar" style="width:200px">
                             <p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>
                         </div>
@@ -76,8 +81,10 @@ $sql = $db->prepare('
                         <li class="event">
                             <div class="item">
                                 <strong class="item-name item-name-event"><?php echo $ev['name']; ?></strong>
-                                <div class="time-bar" style="width:200px">
-                                    <p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>
+                                <div class="time-bar-wrapper">
+                                    <div class="time-bar" style="left:<?php echo (($ev['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $ev['time_end']) / $time_diff) * 100; ?>%">
+                                        <p class="time-bar-times"><span class="time-bar-start"><?php echo $ev['time_start']; ?></span> <span class="time-bar-end"><?php echo $ev['time_end']; ?></span></p>
+                                    </div>
                                 </div>
 								
 								<?php
