@@ -1,0 +1,242 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+	margin: 0;
+	padding:0;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	
+
+}
+
+body {
+	margin:0 auto;
+	width: 80%;
+}
+h1 {
+	background-color:#333;
+	color:#FC0;
+}
+
+.apptitle {
+	float:left;
+}
+
+form {
+	clear: both;
+	text-align:right;
+	margin-bottom: 2em;
+}
+
+.locationdetail {
+	text-align:right;
+}
+.am {
+}
+
+.available {
+	color:#F90;
+	padding-right: 3em;
+}
+.pm {
+	padding-right: 3em;
+}
+
+.pay {
+	padding-right: 3em;
+	color:#6C6;
+}
+.averagerating {
+	padding-right:3em;
+	color:#FC6;
+}
+.yourrating {
+	padding-left: 3em;
+	color:#FC6;
+}
+
+.category {
+	margin: 0;
+	/*padding: 0.1px;*/
+	background-color: #E6E6E6;
+	/*#FF00FF;*/
+	line-height: 2.5em;
+	font-size: 130%;	
+	border-top: 1px solid #ffffff;
+	padding-left: 1em;
+}
+
+.allcategories {
+	list-style-type:none;
+	/*text-decoration:none;*/
+}
+.categorytab {
+	border-top:2px solid #CCC;
+}
+
+.galleries:link,
+.galleries:visited,
+.museums:link,
+.museums:visited,
+.festivals:link,
+.festivals:visited,
+.entertainment:link,
+.entertainment:visited,
+sites:link,
+sites:visited,
+leisure:link,
+leisure:visited {
+	color: #333;
+	/*line-height:1em;*/
+	
+}
+
+.galleries:hover,
+.galleries:focus {
+	color: #FF00FF;
+}
+
+.museums:hover,
+.museums:focus {
+	color:#F9E853;
+
+}
+
+.festivals:hover,
+.festivals:focus {
+	color:#8CC63F;
+}
+
+.entertainment:hover,
+.entertainment:focus {
+	color:#FF8040;
+}
+
+.sites:hover,
+.sites:focus {
+	color:#1be2e2;
+}
+
+
+
+.leisure:hover,
+.leisure:focus {
+	color:#8dAbFF;
+}
+
+/*galleries*/
+.one {
+	border-left:8px solid #FF00FF;
+}
+/*museums*/
+.two {
+	border-left:8px solid #F9E853;
+}
+
+/*festivals*/
+.three {
+	border-left:8px solid #8CC63F;
+}
+
+/*entertainment*/
+.four {
+	border-left:8px solid #FF8040;
+}
+
+/*sites*/
+.five {
+	border-left:8px solid #1be2e2;;
+}
+
+/*leisure*/
+.six {
+	border-left:8px solid #8dAbFF;
+}
+
+
+.event {
+	margin:0;
+	padding:0;
+}
+.item {
+	clear:both;
+	margin:0 0 4px 0;
+	padding-left:0.5em;;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background-color:#f5f7f7;
+}
+
+.category ul {
+	list-style-type: none;
+}
+.item-name {
+	margin:0;
+	padding: 0;
+	width: 50%;
+	float:left;
+	/*background-color:#00F; ask Thomas how to get equal width*/
+}
+.item-name-event {
+	margin:0;
+	padding:0;
+	width: 46.9%;
+	float:left;
+}
+
+.time-bar-wrapper {
+	width: 50%;
+	position: relative;
+	background-color: rgba(0,0,0,0.5);
+	min-height: 15px;
+}
+
+.time-bar {
+	margin:0;
+	padding:0 0 5px;
+	position: absolute;
+	background-color:#F30;
+ 
+}
+.time-bar-times {
+	margin:0;
+	padding:0;
+	background-color: #f5f7f7;
+}
+
+/*rate ---------------------------------------*/
+.rater {
+	display: inline-block;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	
+}
+.rater li {
+	display: inline;
+}
+
+.rater a  {
+	text-decoration:none;
+}
+
+
+.rater-level a {
+	color:#Fc6;
+	
+}
+.is-rated a{
+	color:#F93;	
+}
+
+.pay {
+	/*color:#009245;*/
+	color:#39b54a;
+}
+/********************************************
+css for location */
+.item-name a {
+
+	text-decoration:none;
+}
