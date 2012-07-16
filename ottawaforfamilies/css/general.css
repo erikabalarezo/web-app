@@ -31,20 +31,23 @@ form {
 .locationdetail {
 	text-align:right;
 }
-.am {
-}
 
+
+
+
+.am {
+    margin-right: 20%;
+}
 .available {
-	color:#F90;
-	padding-right: 3em;
+    color: #FF9900;
+    margin-right: 20%;
 }
 .pm {
-	padding-right: 3em;
+    margin-right: 6em;
 }
 
-.pay {
-	padding-right: 3em;
-	color:#6C6;
+.paytitle {
+    margin-right: 5%;
 }
 .averagerating {
 	padding-right:3em;
@@ -69,6 +72,9 @@ form {
 .allcategories {
 	list-style-type:none;
 	/*text-decoration:none;*/
+	/*added erika */
+	margin:0;
+	padding:0;
 }
 .categorytab {
 	border-top:2px solid #CCC;
@@ -127,6 +133,7 @@ leisure:visited {
 /*galleries*/
 .one {
 	border-left:8px solid #FF00FF;
+	
 }
 /*museums*/
 .two {
@@ -190,6 +197,8 @@ leisure:visited {
 	position: relative;
 	background-color: rgba(0,0,0,0.5);
 	min-height: 15px;
+	
+	margin-left: 30%;
 }
 
 .time-bar {
@@ -212,6 +221,10 @@ leisure:visited {
 	margin:0;
 	padding:0;
 	
+	/*erika added*/
+	
+	margin-left: 3%;
+	
 }
 .rater li {
 	display: inline;
@@ -231,8 +244,8 @@ leisure:visited {
 }
 
 .pay {
-	/*color:#009245;*/
-	color:#39b54a;
+    color: #39B54A;
+    margin-left: 38%;
 }
 /********************************************
 css for location */
