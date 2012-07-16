@@ -41,8 +41,11 @@ $sql = $db->prepare('
 		</form>
 	</header>
     
+    <!--top app up to here -->   
     <div class="locationdetail">
-    	<strong><span class="am">a.m</span><span class="available">Available</span><span class="pm">p.m</span><span class="pay">Pay</span><span class="averagerating">Average Rating</span>
+    	
+    	<strong><span class="am">8a.m</span><span class="available">Available</span><span class="pm">11p.m</span>
+        <span class="paytitle">Pay</span><span class="averagerating">Average Rating</span>
         <!--<span class="yourrating">Your Rating</span>-->
     	</strong>
     </div>
@@ -306,7 +309,7 @@ $sql = $db->prepare('
             
         </li>
 	</ul>
-	
+<!--bottom app from here -->	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script src="js/date-validation.js"></script>
 </body>
