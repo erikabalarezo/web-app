@@ -18,6 +18,15 @@ h1 {
 	color:#FC0;
 }
 
+.apptitle {
+	float:left;
+}
+
+form {
+	clear: both;
+	text-align:right;
+	margin-bottom: 2em;
+}
 
 .locationdetail {
 	text-align:right;
@@ -27,18 +36,18 @@ h1 {
 
 .available {
 	color:#F90;
-	padding-left: 3em;
+	padding-right: 3em;
 }
 .pm {
-	padding-left: 3em;
+	padding-right: 3em;
 }
 
 .pay {
-	padding-left: 3em;
+	padding-right: 3em;
 	color:#6C6;
 }
 .averagerating {
-	padding-left:3em;
+	padding-right:3em;
 	color:#FC6;
 }
 .yourrating {
@@ -175,20 +184,25 @@ leisure:visited {
 	width: 46.9%;
 	float:left;
 }
+
+.time-bar-wrapper {
+	width: 50%;
+	position: relative;
+	background-color: rgba(0,0,0,0.5);
+	min-height: 15px;
+}
+
 .time-bar {
 	margin:0;
-	padding:0;
-	width: 50%;
-	float:left;
+	padding:0 0 5px;
+	position: absolute;
 	background-color:#F30;
  
 }
 .time-bar-times {
 	margin:0;
 	padding:0;
-	/*text-decoration:none;
-	display:inline;*/
-	float:left;
+	background-color: #f5f7f7;
 }
 
 /*rate ---------------------------------------*/
