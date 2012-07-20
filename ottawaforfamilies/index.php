@@ -7,18 +7,32 @@ $max_end_time = 23;
 $time_diff = $max_end_time - $min_start_time;
 
 $sql = $db->prepare('
-	SELECT id, name
+	SELECT id, name, time_start, time_end
 	FROM off_location
 	ORDER BY name ASC
 ');
 $sql->execute();
 $locations = $sql->fetchAll();
 
+$date = filter_input(INPUT_POST, 'date', FILTER_SANITIZE_STRING);
+var_dump($date);
+if(empty($date)) {
+	$date = date('Y-m-d');
+	echo 'today';
+}
+else {
+	$date = date('Y-m-d', strtotime($date));
+	var_dump($date);
+}
+
 $sql = $db->prepare('
 	SELECT id, start_date, end_date, time_start, time_end, name, rate_count, rate_total, paid
 	FROM off_event
 	WHERE location_id = :location_id
+	AND start_date <= :date
+	AND end_date >= :date
 ');
+$sql->bindValue(':date', $date, PDO::PARAM_STR);
 
 ?><!DOCTYPE HTML>
 <html>
@@ -31,11 +45,11 @@ $sql = $db->prepare('
 <body>
 	<header>
 		<!--<h1 class="apptitle">Ottawa For Families</h1>-->
-		<form>
+		<form method="post" action="index.php">
 			<div>
-				<label for="date">Date (YYYY-MM-DD)</label>
+				<label for="date">Date</label>
 				<!--<label for="dateformat">(DD/MM/YYYY)</label>-->
-				<input id="date" name="date" required>
+				<input id="date" name="date">
 				<button id="submitdate" type="submit">Find my events</button>
 			</div>
 		</form>
@@ -66,6 +80,11 @@ $sql = $db->prepare('
                 <li>
                     <div class="item item-title">
                         <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
+                         <div class="time-bar-wrapper location-time-bar">
+                         	<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
+                          		<p class="time-bar-times"><span class="time-bar-start"><?php echo $loc['time_start']; ?></span> <span class="time-bar-end"><?php echo $loc['time_end']; ?></span></p>
+                          	</div>
+                         </div>
                         <!--<div class="time-bar" style="width:200px">-->
                             <!--<p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>-->
                         <!--</div>-->
@@ -153,6 +172,7 @@ $sql = $db->prepare('
                     	<?php
 							$sql->bindValue(':location_id', $loc['id'], PDO::PARAM_INT);
 							$sql->execute();
+							//var_dump($sql->errorInfo());
 							$events = $sql->fetchAll();
 							
 							foreach($events as $ev) :
@@ -322,6 +342,6 @@ $sql = $db->prepare('
 	</ul>
 <!--bottom app from here -->	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script src="js/date-validation.js"></script>
+	<!--<script src="js/date-validation.js"></script>-->
 </body>
 </html>
