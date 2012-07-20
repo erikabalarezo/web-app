@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 09, 2012 at 07:30 PM
+-- Generation Time: Jul 16, 2012 at 07:16 PM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -29,6 +29,8 @@ CREATE TABLE IF NOT EXISTS `off_event` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `start_date` date NOT NULL,
   `end_date` date NOT NULL,
+  `time_start` decimal(4,2) NOT NULL,
+  `time_end` decimal(4,2) NOT NULL,
   `category` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
   `location_id` int(50) NOT NULL,
   `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
@@ -45,10 +47,10 @@ CREATE TABLE IF NOT EXISTS `off_event` (
 -- Dumping data for table `off_event`
 --
 
-INSERT INTO `off_event` (`id`, `start_date`, `end_date`, `category`, `location_id`, `name`, `description`, `rating`, `rate_count`, `rate_total`, `paid`) VALUES
-(1, '2012-05-25', '2012-09-03', 'Galleries', 0, 'Van Gogh Up Close', 'Featuring more than 40 of the famous artist’s works, some of them rarely seen in public. This exhibition presents Van Gogh’s close up view of nature.  This is an exclusive canadian showing expected to be highly popular.', 1, 2, 3, 0),
-(2, '2012-06-22', '2012-09-09', 'Galleries', 1, 'Christos Pantieras - Your Word is Bond', 'Your Word Is Bond explores the notion of giving your word to someone, of what it means to speak tender or fervent “truths” that are sincerely meant at one time but not for all time. The exhibition considers as well the nature of memory, correspondence and other talismans of the past. Composed of four inter-related works by Ottawa-based artist Christos Pantieras, each piece stands as a chronicle of a separate relationship, linked together via correspondence that lays it bare, from initial flirtations to parting words. ', 1, 2, 7, 0),
-(3, '2012-06-22', '2012-08-19', 'Galleries', 1, 'Adad Hannah - Visitors', 'Visitors demonstrates Hannah’s interest in activating a historical work, as well as depicting subjects and situations encountered by chance. Whether we are being transported to Calais in the installation, or stumble upon the couple’s sweet embrace, the viewer becomes a visitor to both sites. Each work, like a memento mori, is a reminder of our imminent death, whether physical, induced by sleep or controlled by the camera’s lens.', 1, 1, 5, 0);
+INSERT INTO `off_event` (`id`, `start_date`, `end_date`, `time_start`, `time_end`, `category`, `location_id`, `name`, `description`, `rating`, `rate_count`, `rate_total`, `paid`) VALUES
+(1, '2012-05-25', '2012-09-03', '10.00', '17.00', 'Galleries', 1, 'Van Gogh Up Close', 'Featuring more than 40 of the famous artist’s works, some of them rarely seen in public. This exhibition presents Van Gogh’s close up view of nature.  This is an exclusive canadian showing expected to be highly popular.', 1, 3, 4, 0),
+(2, '2012-06-22', '2012-09-09', '9.00', '16.00', 'Galleries', 2, 'Christos Pantieras - Your Word is Bond', 'Your Word Is Bond explores the notion of giving your word to someone, of what it means to speak tender or fervent “truths” that are sincerely meant at one time but not for all time. The exhibition considers as well the nature of memory, correspondence and other talismans of the past. Composed of four inter-related works by Ottawa-based artist Christos Pantieras, each piece stands as a chronicle of a separate relationship, linked together via correspondence that lays it bare, from initial flirtations to parting words. ', 1, 2, 7, 0),
+(3, '2012-06-22', '2012-08-19', '10.00', '18.00', 'Galleries', 2, 'Adad Hannah - Visitors', 'Visitors demonstrates Hannah’s interest in activating a historical work, as well as depicting subjects and situations encountered by chance. Whether we are being transported to Calais in the installation, or stumble upon the couple’s sweet embrace, the viewer becomes a visitor to both sites. Each work, like a memento mori, is a reminder of our imminent death, whether physical, induced by sleep or controlled by the camera’s lens.', 1, 1, 5, 0);
 
 --
 -- Constraints for dumped tables
