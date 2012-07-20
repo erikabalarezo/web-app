@@ -26,8 +26,8 @@ header {
 
 
 h1 {
-	background-color:#333;
-	color:#FC0;
+	/*background-color:#333;
+	color:#FC0;*/
 }
 
 .apptitle {
@@ -67,7 +67,7 @@ form {
 .time-detail {
     /*background-color: #99CC99;*/
     float: left;
-    margin-left: 38%;
+    margin-left: 36.7%;
 	padding-top:1em;
     width: 34%;
 	border-bottom: 5px solid #F7931E;
@@ -86,7 +86,7 @@ form {
 
 .pm {
     /*background-color: #993399;*/
-    margin-left: 29%;
+    margin-left: 46%;
     
 }
 
@@ -126,7 +126,7 @@ form {
 	top: -10px;
 	padding: 0;
 	position:absolute;
-	
+	left: 0;
 }
 .galleries {
 	margin-bottom:1em;
@@ -224,45 +224,28 @@ leisure:visited {
 .item {
 	clear:both;
 	margin-bottom:4px;
-	margin-left: 1em;
+	margin-left: 2em;
 	padding: 0 0 0 0.5em;
+	position: relative;
 	
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
 	background-color:#f5f7f7;
 }
+
 .item-title {
 	margin-left:1em;
 	padding:0;
 }
 
-.events {
-	border-top:2px solid #FFFFFF;
-}
-.category ul {
-	list-style-type: none;
-	/*these 2 lines to get rid of spaces on the side*/
-	/*margin: 0;*/
-	padding: 0;
-	
-}
 
-.category ul li {
-	margin:0;
-	padding: 0;
-}
 .item-name {
 	margin:4px 0;
 	/*added this for padding*/
 	/*padding-left: 0.5em;*/
 
-	width: 100%;
-	float:left;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
-	background-color:#f5f7f7;
+	position: relative;
 	/*background-color:#00F; ask Thomas how to get equal width*/
 }
 
@@ -284,15 +267,34 @@ leisure:visited {
 }
 
 
+.events {
+	border-top:2px solid #FFFFFF;
+}
+.category ul {
+	list-style-type: none;
+	/*these 2 lines to get rid of spaces on the side*/
+	/*margin: 0;*/
+	padding: 0;
+	
+}
 
+.category ul li {
+	margin:0;
+	padding: 0;
+}
+
+.location-time-bar {
+	/*position: absolute;*/
+}
 
 .time-bar-wrapper {
     /*background-color: rgba(0, 0, 0, 0.5);*/
     margin-left: 36%;
     min-height: 15px;
-    position: relative;
+    position: absolute;
     width: 35%;
-	
+	top: 0;
+	left: 0;
 }
 
 .time-bar {
@@ -349,3 +351,11 @@ leisure:visited {
     margin-left: 33%;
 }
 
+/*style for detail info of a location*/
+.nationalgallery {
+	background-color:  #F5F7F7;
+	border-top: 1px solid #ffffff;
+	padding-left: 1em;
+	border-left:8px solid #FF00FF;
+	padding-bottom:1em;
+}
