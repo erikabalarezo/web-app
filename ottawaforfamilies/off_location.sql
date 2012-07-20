@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 06, 2012 at 04:00 PM
+-- Generation Time: Jul 16, 2012 at 07:16 PM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -37,5 +37,5 @@ CREATE TABLE IF NOT EXISTS `off_location` (
 --
 
 INSERT INTO `off_location` (`id`, `name`, `description`) VALUES
-(0, 'National Gallery of Canada', 'National Gallery of Canada 380 Sussex Drive P.O. Box 427, Station A Ottawa, Ontario K1N 9N4 Canada  General Inquiries Tel: 613-990-1985 Toll free: 1-800-319-ARTS (2787) Fax: 613-993-4385 TDD: 613-990-0777 Email: info@gallery.ca '),
-(1, 'The Ottawa Art Gallery', 'The Ottawa Art Gallery Arts Court, 2 Daly Avenue, Ottawa, Ontario K1N 6E2 Canada 613-233-8699 fax 613-569-7660 info@ottawaartgallery.ca');
+(1, 'National Gallery of Canada', 'National Gallery of Canada 380 Sussex Drive P.O. Box 427, Station A Ottawa, Ontario K1N 9N4 Canada  General Inquiries Tel: 613-990-1985 Toll free: 1-800-319-ARTS (2787) Fax: 613-993-4385 TDD: 613-990-0777 Email: info@gallery.ca '),
+(2, 'The Ottawa Art Gallery', 'The Ottawa Art Gallery Arts Court, 2 Daly Avenue, Ottawa, Ontario K1N 6E2 Canada 613-233-8699 fax 613-569-7660 info@ottawaartgallery.ca');
