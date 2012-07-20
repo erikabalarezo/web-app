@@ -52,7 +52,7 @@ exit;
 	<?php foreach($evdetails as $evdet) : ?>
 		<?php $category = $evdet['category']; ?>
 		
-		<h1><?php echo $evdet['name']; ?></h1>
+		<h2><?php echo $evdet['name']; ?></h1>
 		<p><?php echo $evdet['description']; ?></p>
 	<?php endforeach; ?>
 <?php endforeach; ?>
