@@ -1,0 +1,319 @@
+@charset "utf-8";
+/* CSS Document */
+
+html {
+	margin: 0;
+	padding:0;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	
+
+}
+
+body {
+	margin:0 auto;
+	width: 80%;
+}
+h1 {
+	background-color:#333;
+	color:#FC0;
+}
+
+.apptitle {
+	float:left;
+}
+
+form {
+	clear: both;
+	text-align:right;
+	margin-bottom: 2em;
+}
+
+
+
+.locationdetail {
+	width:100%;
+   
+}
+
+.time-detail {
+    background-color: #99CC99;
+    margin-left: 42%;
+    width: 32%;
+	float: left;
+	/*border-bottom: 5px solid #F7931E;*/
+	
+}
+.am {
+	text-align: left;
+	width:6em;
+	background-color:#0CC;
+}
+
+.available {
+background-color: #CC6699;
+    color: #FF9900;
+    margin-left: 30%;
+}
+
+.pm {
+    background-color: #993399;
+    margin-left: 29%;
+    
+}
+
+.paytitle {
+    margin-left: 5%;
+	color:#8CC63F;
+}
+.averagerating {
+	margin-left: 3%;
+	color:#F7931E;
+}
+.yourrating {
+	padding-left: 3em;
+	color:#FC6;
+}
+
+.category {
+	margin: 0;
+	/*padding: 0.1px;*/
+	background-color: #E6E6E6;
+	/*#FF00FF;*/
+	line-height: 2.5em;
+	font-size: 130%;	
+	border-top: 1px solid #ffffff;
+	/*padding-left: 1em;*/
+}
+
+.allcategories {
+	list-style-type:none;
+	/*text-decoration:none;*/
+	/*added erika */
+	margin:0;
+	padding:0;
+}
+
+.icon {
+	top: -8px;
+	padding: 0;
+	position:absolute;
+	
+}
+.galleries {
+	margin-bottom:1em;
+	position: relative;
+	padding-left: 3em;
+	
+}
+
+.galleries:link,
+.galleries:visited,
+.museums:link,
+.museums:visited,
+.festivals:link,
+.festivals:visited,
+.entertainment:link,
+.entertainment:visited,
+sites:link,
+sites:visited,
+leisure:link,
+leisure:visited {
+	color: #333;
+	/*line-height:1em;*/
+	
+}
+
+.galleries:hover,
+.galleries:focus {
+	color: #FF00FF;
+}
+
+.museums:hover,
+.museums:focus {
+	color:#F9E853;
+
+}
+
+.festivals:hover,
+.festivals:focus {
+	color:#8CC63F;
+}
+
+.entertainment:hover,
+.entertainment:focus {
+	color:#FF8040;
+}
+
+.sites:hover,
+.sites:focus {
+	color:#1be2e2;
+}
+
+
+
+.leisure:hover,
+.leisure:focus {
+	color:#8dAbFF;
+}
+
+/*galleries*/
+.one {
+	border-left:8px solid #FF00FF;
+	
+}
+/*museums*/
+.two {
+	border-left:8px solid #F9E853;
+}
+
+/*festivals*/
+.three {
+	border-left:8px solid #8CC63F;
+}
+
+/*entertainment*/
+.four {
+	border-left:8px solid #FF8040;
+}
+
+/*sites*/
+.five {
+	border-left:8px solid #1be2e2;;
+}
+
+/*leisure*/
+.six {
+	border-left:8px solid #8dAbFF;
+}
+
+
+.event {
+	margin:0;
+	padding:0;
+}
+.item {
+	clear:both;
+	margin-bottom:4px;
+	margin-left: 1em;
+	padding: 0 0 0 0.5em;
+	
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background-color:#f5f7f7;
+}
+
+.events {
+	border-top:2px solid #FFFFFF;
+}
+.category ul {
+	list-style-type: none;
+	/*these 2 lines to get rid of spaces on the side*/
+	margin: 0;
+	padding: 0;
+	
+}
+
+.category ul li {
+	margin:0;
+	padding: 0;
+}
+.item-name {
+	margin:4px 0;
+	/*added this for padding*/
+	/*padding-left: 0.5em;*/
+
+	width: 100%;
+	float:left;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background-color:#f5f7f7;
+	/*background-color:#00F; ask Thomas how to get equal width*/
+}
+
+.item-name a{
+	padding-left:0.5em;
+}	
+/*.item-name-event {
+	margin-left:1em;
+	padding:0;
+	width: 46.9%;
+	float:left;
+}
+*/
+/*.item-name-event {
+    float: left;
+    margin-left: 1em;
+    padding-left: 1em;
+    width: 40.9%;
+}
+*/
+.time-bar-wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-left: 36%;
+    min-height: 15px;
+    position: relative;
+    width: 35%;
+	
+}
+
+.time-bar {
+	margin:0;
+	padding:0 0 5px;
+	position: absolute;
+	/*background-color:#F30;*/
+	background-color:#f7931e;
+	font-size:75%;
+	line-height: 2.5em;
+ 
+}
+.time-bar-times {
+	margin:0;
+	padding:0;
+	background-color: #f5f7f7;
+}
+
+.time-bar-end {
+	float: right;
+}
+/*rate ---------------------------------------*/
+.rater {
+	display: inline-block;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	
+	/*erika added*/
+	
+	margin-left: 3%;
+	
+}
+.rater li {
+	display: inline;
+}
+
+.rater a  {
+	text-decoration:none;
+}
+
+
+.rater-level a {
+	color:#Fc6;
+	
+}
+.is-rated a{
+	color:#F93;	
+}
+
+.pay {
+    color: #8CC63F;
+    margin-left: 29%;
+}
+
+/********************************************
+css for location */
+.item-name a {
+
+	text-decoration:none;
+}
