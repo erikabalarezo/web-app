@@ -30,7 +30,7 @@ $sql = $db->prepare('
 
 <body>
 	<header>
-		<h1 class="apptitle">Ottawa For Families</h1>
+		<!--<h1 class="apptitle">Ottawa For Families</h1>-->
 		<form>
 			<div>
 				<label for="date">Date (YYYY-MM-DD)</label>
@@ -40,27 +40,35 @@ $sql = $db->prepare('
 			</div>
 		</form>
 	</header>
-    
-    <!--top app up to here -->   
-    <div class="locationdetail">
-    	
-    	<strong><span class="am">8a.m</span><span class="available">Available</span><span class="pm">11p.m</span>
-        <span class="paytitle">Pay</span><span class="averagerating">Average Rating</span>
-        <!--<span class="yourrating">Your Rating</span>-->
-    	</strong>
+	<div class="locationdetail">
+	    <!--<div class="time-bar-wrapper">-->
+		<strong>
+			 <div class="time-detail">
+				<span class="am">8a.m</span>
+				<span class="available">Available</span>
+				<span class="pm">11p.m</span>
+			</div>
+			<div class="pay-rating-detail">
+				<span class="paytitle">Pay</span>
+				<span class="averagerating">Average Rating</span>
+			</div>
+        </strong>
     </div>
     
 	<ul class="allcategories">
 		<li class="category one">
-        	<a class="categorytab galleries">Galleries</a>
+			<a class="categorytab galleries">
+			<img class="icon" src="images/pinkcircle-galleries.png">Galleries
+			</a>
+			
             <ul>
             	<?php foreach($locations as $loc) : ?>
                 <li>
-                    <div class="item">
+                    <div class="item item-title">
                         <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
-                        <div class="time-bar" style="width:200px">
-                            <p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>
-                        </div>
+                        <!--<div class="time-bar" style="width:200px">-->
+                            <!--<p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>-->
+                        <!--</div>-->
                     </div>
                     <ul class="events">
                     	<?php
@@ -83,9 +91,12 @@ $sql = $db->prepare('
 						
                         <li class="event">
                             <div class="item">
-                                <strong class="item-name item-name-event"><?php echo $ev['name']; ?></strong>
+							<!--<strong class="item-name item-name-event">-->
+							
+								<strong class="item-name item-name-event"><?php echo $ev['name']; ?></strong>
+                               
                                 <div class="time-bar-wrapper">
-                                    <div class="time-bar" style="left:<?php echo (($ev['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $ev['time_end']) / $time_diff) * 100; ?>%">
+                                    <div class="time-bar" style="left:<?php echo (($ev['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $ev['time_end']) / $time_diff) * 100; ?>%;">
                                         <p class="time-bar-times"><span class="time-bar-start"><?php echo $ev['time_start']; ?></span> <span class="time-bar-end"><?php echo $ev['time_end']; ?></span></p>
                                     </div>
                                 </div>
@@ -116,7 +127,7 @@ $sql = $db->prepare('
 							
 							
 								
-                            </div><!--end for item-->
+                           </div><!--end for item-->
                         </li>
                         <?php endforeach; ?>
                     </ul>
