@@ -12,7 +12,19 @@ html {
 body {
 	margin:0 auto;
 	width: 80%;
+	background-color:#BDCCD4;
+	/*background-color:#999;*/
 }
+header {
+	background: url(../images/logoyellow.png) #F6F8F7 1em no-repeat;
+	
+	/*#FC3*/
+	margin:0;
+	padding:0;
+	height: 10em;
+}
+
+
 h1 {
 	background-color:#333;
 	color:#FC0;
@@ -23,35 +35,68 @@ h1 {
 }
 
 form {
-	clear: both;
+	/*clear: both;*/
 	text-align:right;
-	margin-bottom: 2em;
+	padding-top: 6em;
+	padding-right: 1em;
+	
+}
+
+.pay-rating-detail{
+	background-color:#F6F8F7;
+	border-bottom:4px solid #F6F8F7;
+	padding-top: 1em;
+	padding-bottom:0.5em;
 }
 
 .locationdetail {
-	text-align:right;
+	width:100%;
+	margin:0;
+	padding:0;
 }
 
+/*.time-detail {
+    background-color: #99CC99;
+    margin-left: 42%;
+    width: 32%;
+	float: left;
+	*//*border-bottom: 5px solid #F7931E;*/
+	
+/*}*/
 
-
-
+.time-detail {
+    /*background-color: #99CC99;*/
+    float: left;
+    margin-left: 38%;
+	padding-top:1em;
+    width: 34%;
+	border-bottom: 5px solid #F7931E;
+}
 .am {
-    margin-right: 20%;
+	text-align: left;
+	width:6em;
+	/*background-color:#0CC;*/
 }
+
 .available {
+	/*background-color: #CC6699;*/
     color: #FF9900;
-    margin-right: 20%;
+    margin-left: 30%;
 }
+
 .pm {
-    margin-right: 6em;
+    /*background-color: #993399;*/
+    margin-left: 29%;
+    
 }
 
 .paytitle {
-    margin-right: 5%;
+    margin-left: 5%;
+	color:#8CC63F;
 }
 .averagerating {
-	padding-right:3em;
-	color:#FC6;
+	margin-left: 3%;
+	color:#F7931E;
 }
 .yourrating {
 	padding-left: 3em;
@@ -66,7 +111,7 @@ form {
 	line-height: 2.5em;
 	font-size: 130%;	
 	border-top: 1px solid #ffffff;
-	padding-left: 1em;
+	/*padding-left: 1em;*/
 }
 
 .allcategories {
@@ -76,8 +121,18 @@ form {
 	margin:0;
 	padding:0;
 }
-.categorytab {
-	border-top:2px solid #CCC;
+
+.icon {
+	top: -10px;
+	padding: 0;
+	position:absolute;
+	
+}
+.galleries {
+	margin-bottom:1em;
+	position: relative;
+	padding-left: 3em;
+	
 }
 
 .galleries:link,
@@ -133,6 +188,7 @@ leisure:visited {
 /*galleries*/
 .one {
 	border-left:8px solid #FF00FF;
+	clear:both;
 	
 }
 /*museums*/
@@ -167,45 +223,86 @@ leisure:visited {
 }
 .item {
 	clear:both;
-	margin:0 0 4px 0;
-	padding-left:0.5em;;
+	margin-bottom:4px;
+	margin-left: 1em;
+	padding: 0 0 0 0.5em;
+	
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
 	background-color:#f5f7f7;
 }
+.item-title {
+	margin-left:1em;
+	padding:0;
+}
 
+.events {
+	border-top:2px solid #FFFFFF;
+}
 .category ul {
 	list-style-type: none;
+	/*these 2 lines to get rid of spaces on the side*/
+	/*margin: 0;*/
+	padding: 0;
+	
 }
-.item-name {
+
+.category ul li {
 	margin:0;
 	padding: 0;
-	width: 50%;
+}
+.item-name {
+	margin:4px 0;
+	/*added this for padding*/
+	/*padding-left: 0.5em;*/
+
+	width: 100%;
 	float:left;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background-color:#f5f7f7;
 	/*background-color:#00F; ask Thomas how to get equal width*/
 }
-.item-name-event {
-	margin:0;
+
+.item-name a {
+	padding-left:0.5em;
+	text-decoration:none;
+}	
+/*.item-name-event {
+	margin-left:1em;
 	padding:0;
 	width: 46.9%;
 	float:left;
+}*/
+.item-name-event {
+    float: left;
+    margin-left: 1em;
+    padding-left: 0;
+    width: 40.9%;
 }
 
+
+
+
 .time-bar-wrapper {
-	width: 50%;
-	position: relative;
-	background-color: rgba(0,0,0,0.5);
-	min-height: 15px;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    margin-left: 36%;
+    min-height: 15px;
+    position: relative;
+    width: 35%;
 	
-	margin-left: 30%;
 }
 
 .time-bar {
 	margin:0;
 	padding:0 0 5px;
 	position: absolute;
-	background-color:#F30;
+	/*background-color:#F30;*/
+	background-color:#f7931e;
+	font-size:75%;
+	line-height: 2.5em;
  
 }
 .time-bar-times {
@@ -214,6 +311,9 @@ leisure:visited {
 	background-color: #f5f7f7;
 }
 
+.time-bar-end {
+	float: right;
+}
 /*rate ---------------------------------------*/
 .rater {
 	display: inline-block;
@@ -243,13 +343,9 @@ leisure:visited {
 	color:#F93;	
 }
 
-.pay {
-    color: #39B54A;
-    margin-left: 38%;
-}
-/********************************************
-css for location */
-.item-name a {
 
-	text-decoration:none;
+.pay {
+    color: #8CC63F;
+    margin-left: 33%;
 }
+
