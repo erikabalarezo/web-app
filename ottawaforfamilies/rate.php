@@ -17,13 +17,22 @@ exit;
 // 2. the rating value is greater than 0
 // 3. the rating value is less than 5
 if (isset($cookie[$id]) || $rate < 0 || $rate > 5) {
-header('Location: single.php?id=' . $id);
+header('Location: index.php');
 exit;
 }
 
+//if ($dino['rate_count'] > 0) {
+//$rating = round($dino['rate_total'] / $dino['rate_count']);
+//} else {
+//$rating = 0;
+//}
+
+
+
+
 $sql = $db->prepare('
 UPDATE off_event
-SET rate_count = rate_count + 1, rate_total = rate_total + :rate
+SET rate_count = rate_count + 1, rate_total = rate_total + :rate,
 WHERE id = :id
 ');
 $sql->bindValue(':id', $id, PDO::PARAM_INT);
@@ -32,7 +41,7 @@ $sql->execute();
 
 save_rate_cookie($id, $rate);
 
-header('Location: single.php?id=' . $id);
+header('Location: index.php');
 exit;
 
 
