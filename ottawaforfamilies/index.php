@@ -1,6 +1,6 @@
 <?php
-
 require_once 'includes/db.php';
+session_start();
 
 $min_start_time = 8;
 $max_end_time = 23;
@@ -18,12 +18,18 @@ $date = filter_input(INPUT_POST, 'date', FILTER_SANITIZE_STRING);
 var_dump($date);
 if(empty($date)) {
 	$date = date('Y-m-d');
-	echo 'today';
+	//echo 'today';
 }
 else {
 	$date = date('Y-m-d', strtotime($date));
-	var_dump($date);
+	//var_dump($date);
 }
+
+session_regenerate_id();
+$_SESSION['date'] = $date;
+header('Location: index.php' );
+exit;
+
 
 $sql = $db->prepare('
 	SELECT id, start_date, end_date, time_start, time_end, name, rate_count, rate_total, paid
@@ -112,7 +118,8 @@ $sql->bindValue(':date', $date, PDO::PARAM_STR);
                             <div class="item">
 							<!--<strong class="item-name item-name-event">-->
 							
-								<strong class="item-name item-name-event"><?php echo $ev['name']; ?></strong>
+								<strong class="item-name item-name-event"><a href="locdescription.php?id=<?php echo $loc['id']; ?>">
+								<?php echo $ev['name']; ?></a></strong>
                                
                                 <div class="time-bar-wrapper">
                                     <div class="time-bar" style="left:<?php echo (($ev['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $ev['time_end']) / $time_diff) * 100; ?>%;">
