@@ -2,6 +2,7 @@
 
 require_once 'includes/db.php';
 require_once 'includes/functions.php';
+session_start();
 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
@@ -22,9 +23,10 @@ $details= $sql->fetchALL();
 $sql = $db->prepare('
 	SELECT location_id, category, name, description
 	FROM off_event
-	WHERE location_id = :id
+	WHERE location_id = :id AND :date BETWEEN start_date AND end_date
 ');
 $sql->bindValue(':id', $id, PDO::PARAM_STR);
+$sql->bindValue(':date', $_SESSION['date'], PDO::PARAM_STR);
 $sql->execute();
 $evdetails= $sql->fetchALL();
 
@@ -36,10 +38,10 @@ if (empty($details)) {
 header('Location: index.php');
 exit;
 }
-if (empty($evdetails)) {
+/*if (empty($evdetails)) {
 header('Location: index.php');
 exit;
-}
+}*/
 //include 'includes/app-top.php';
 
 
