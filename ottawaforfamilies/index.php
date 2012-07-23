@@ -2,6 +2,8 @@
 require_once 'includes/db.php';
 session_start();
 
+if (!isset($_SESSION['date'])) $_SESSION['date'] = date('Y-m-d');
+
 $min_start_time = 8;
 $max_end_time = 23;
 $time_diff = $max_end_time - $min_start_time;
@@ -17,7 +19,7 @@ $locations = $sql->fetchAll();
 $date = filter_input(INPUT_POST, 'date', FILTER_SANITIZE_STRING);
 var_dump($date);
 if(empty($date)) {
-	$date = date('Y-m-d');
+	$date = $_SESSION['date'];
 	//echo 'today';
 }
 else {
@@ -25,10 +27,6 @@ else {
 	//var_dump($date);
 }
 
-session_regenerate_id();
-$_SESSION['date'] = $date;
-header('Location: index.php' );
-exit;
 
 
 $sql = $db->prepare('
