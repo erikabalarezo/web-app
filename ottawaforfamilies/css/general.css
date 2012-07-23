@@ -252,7 +252,14 @@ leisure:visited {
 .item-name a {
 	padding-left:0.5em;
 	text-decoration:none;
-}	
+	
+}
+.item-name a:hover,	
+.item-name a:focus {
+	color:#FF00FF;
+}
+
+
 /*.item-name-event {
 	margin-left:1em;
 	padding:0;
