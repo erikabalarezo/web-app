@@ -187,9 +187,9 @@ leisure:visited {
 
 /*galleries*/
 .one {
-	border-left:8px solid #FF00FF;
-	clear:both;
-	
+    border-left: 8px solid #FF00FF;
+    clear: both;
+    padding-bottom: 1px;
 }
 /*museums*/
 .two {
@@ -221,9 +221,9 @@ leisure:visited {
 	margin:0;
 	padding:0;
 }
-.item {
+/*.item {
 	clear:both;
-	margin-bottom:4px;
+	margin-bottom:2px;
 	margin-left: 2em;
 	padding: 0 0 0 0.5em;
 	position: relative;
@@ -233,6 +233,22 @@ leisure:visited {
 	border-radius: 20px;
 	background-color:#f5f7f7;
 }
+*/
+.item {
+    background-color: #F5F7F7;
+    border-radius: 20px 20px 20px 20px;
+    clear: both;
+    margin-bottom: 4px;
+    margin-left: 2em;
+    margin-top: 4px;
+    padding: 0 0 0 0.5em;
+    position: relative;
+}
+
+
+
+
+
 
 .item-title {
 	margin-left:1em;
@@ -241,7 +257,7 @@ leisure:visited {
 
 
 .item-name {
-	margin:4px 0;
+	/*margin:2px 0;*/
 	/*added this for padding*/
 	/*padding-left: 0.5em;*/
 
