@@ -30,7 +30,7 @@ else {
 
 
 $sql = $db->prepare('
-	SELECT id, start_date, end_date, time_start, time_end, name, rate_count, rate_total, paid
+	SELECT id, start_date, end_date, time_start, time_end, name, rate_count, rate_total, paid, category
 	FROM off_event
 	WHERE location_id = :location_id
 	AND start_date <= :date
@@ -65,6 +65,7 @@ include 'includes/wrapper-top.html';
 			
             <ul>
             	<?php foreach($locations as $loc) : ?>
+				<?php if (($loc['id']== '1') || ($loc['id']== '2') )?>
                 <li>
                     <div class="item item-title">
                         <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
@@ -85,7 +86,7 @@ include 'includes/wrapper-top.html';
 							
 							foreach($events as $ev) :
 						?>
-							<?php
+							<?php  //here put the category equal to galleries
 								if ($ev['rate_count'] > 0) {
 									$rating = round($ev['rate_total'] / $ev['rate_count']);
 								} else {
@@ -137,10 +138,32 @@ include 'includes/wrapper-top.html';
 								
                            </div><!--end for item-->
                         </li>
-                        <?php endforeach; ?>
+                        <?php endforeach; ?> <!--for events-->
                     </ul>
                 </li>
-                <?php endforeach; ?>
+				 <!-- added }this but doesnt work-->
+				<?php if ($loc['id']== 'Museums') ?>
+				<li class="category two">
+               		<a class="categorytab museums">Museums</a>
+        			<div class="item item-title">
+                        <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
+                         <div class="time-bar-wrapper location-time-bar">
+                         	<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
+                          		<p class="time-bar-times"><span class="time-bar-start"><?php echo $loc['time_start']; ?></span> <span class="time-bar-end"><?php echo $loc['time_end']; ?></span></p>
+                          	</div>
+                         </div>
+                        <!--<div class="time-bar" style="width:200px">-->
+                            <!--<p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>-->
+                        <!--</div>-->
+                    </div>
+		
+			
+         		</li>
+				
+				
+				
+				
+                <?php endforeach; ?><!--end of all locations -->
             </ul>
         </li>
         
@@ -148,74 +171,12 @@ include 'includes/wrapper-top.html';
 		<li class="category two">
         
         	<a class="categorytab museums">Museums</a>
-        	<ul>
-            	<?php foreach($locations as $loc) : ?>
-                <li>
-                    <div class="item">
-                        <strong class="item-name"><?php echo $loc['name']; ?></strong>
-                        <div class="time-bar" style="width:500px">
-                            <p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>
-                        </div>
-                    </div>
-                    <ul class="events">
-                    	<?php
-							$sql->bindValue(':location_id', $loc['id'], PDO::PARAM_INT);
-							$sql->execute();
-							//var_dump($sql->errorInfo());
-							$events = $sql->fetchAll();
-							
-							foreach($events as $ev) :
-						?>
-                        <li class="event">
-                            <div class="item">
-                                <strong class="item-name item-name-event"><?php echo $ev['name']; ?></strong>
-                                <div class="time-bar" style="width:500px">
-                                    <p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>
-                                </div>
-                            </div>
-                        </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </li>
-                <?php endforeach; ?>
-                
-            </ul>
+        	
          </li>
             
             
 		<li class="category three">
         	<a class="categorytab festivals">Festivals</a>
-        	<ul>
-            	<?php foreach($locations as $loc) : ?>
-                <li>
-                    <div class="item">
-                        <strong class="item-name"><?php echo $loc['name']; ?></strong>
-                        <div class="time-bar" style="width:500px">
-                            <p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>
-                        </div>
-                    </div>
-                    <ul class="events">
-                    	<?php
-							$sql->bindValue(':location_id', $loc['id'], PDO::PARAM_INT);
-							$sql->execute();
-							$events = $sql->fetchAll();
-							
-							foreach($events as $ev) :
-						?>
-                        <li class="event">
-                            <div class="item">
-                                <strong class="item-name item-name-event"><?php echo $ev['name']; ?></strong>
-                                <div class="time-bar" style="width:500px">
-                                    <p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>
-                                </div>
-                            </div>
-                        </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </li>
-                <?php endforeach; ?>
-                
-            </ul>    
         
         
         </li>
@@ -224,36 +185,7 @@ include 'includes/wrapper-top.html';
         
         <li class="category four">
         	<a class="categorytab entertainment">Entertainment</a>
-        	<ul>
-            	<?php foreach($locations as $loc) : ?>
-                <li>
-                    <div class="item">
-                        <strong class="item-name"><?php echo $loc['name']; ?></strong>
-                        <div class="time-bar" style="width:500px">
-                            <p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>
-                        </div>
-                    </div>
-                    <ul class="events">
-                    	<?php
-							$sql->bindValue(':location_id', $loc['id'], PDO::PARAM_INT);
-							$sql->execute();
-							$events = $sql->fetchAll();
-							
-							foreach($events as $ev) :
-						?>
-                        <li class="event">
-                            <div class="item">
-                                <strong class="item-name item-name-event"><?php echo $ev['name']; ?></strong>
-                                <div class="time-bar" style="width:500px">
-                                    <p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>
-                                </div>
-                            </div>
-                        </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </li>
-                <?php endforeach; ?>
-            </ul>
+        	
         
         
         
@@ -261,72 +193,12 @@ include 'includes/wrapper-top.html';
         
 		<li class="category five">
         	<a class="categorytab sites">Sites</a>
-        	<ul>
-            	<?php foreach($locations as $loc) : ?>
-                <li>
-                    <div class="item">
-                        <strong class="item-name"><?php echo $loc['name']; ?></strong>
-                        <div class="time-bar" style="width:500px">
-                            <p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>
-                        </div>
-                    </div>
-                    <ul class="events">
-                    	<?php
-							$sql->bindValue(':location_id', $loc['id'], PDO::PARAM_INT);
-							$sql->execute();
-							$events = $sql->fetchAll();
-							
-							foreach($events as $ev) :
-						?>
-                        <li class="event">
-                            <div class="item">
-                                <strong class="item-name item-name-event"><?php echo $ev['name']; ?></strong>
-                                <div class="time-bar" style="width:500px">
-                                    <p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>
-                                </div>
-                            </div>
-                        </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </li>
-                <?php endforeach; ?>
-            </ul>
-        
+        	
         
         </li>
 		<li class="category six">
         	<a class="categorytab leisure">Leisure</a>
-        	<ul>
-            	<?php foreach($locations as $loc) : ?>
-                <li>
-                    <div class="item">
-                        <strong class="item-name"><?php echo $loc['name']; ?></strong>
-                        <div class="time-bar" style="width:500px">
-                            <p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>
-                        </div>
-                    </div>
-                    <ul class="events">
-                    	<?php
-							$sql->bindValue(':location_id', $loc['id'], PDO::PARAM_INT);
-							$sql->execute();
-							$events = $sql->fetchAll();
-							
-							foreach($events as $ev) :
-						?>
-                        <li class="event">
-                            <div class="item">
-                                <strong class="item-name item-name-event"><?php echo $ev['name']; ?></strong>
-                                <div class="time-bar" style="width:500px">
-                                    <p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>
-                                </div>
-                            </div>
-                        </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </li>
-                <?php endforeach; ?>
-            </ul>    
-            
+        	
         </li>
 	</ul>
 <!--bottom app from here -->	
