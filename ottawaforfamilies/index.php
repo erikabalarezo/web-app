@@ -68,16 +68,13 @@ include 'includes/wrapper-top.html';
 				<?php  if(($loc['id']== 1) || ($loc['id']== 2)) { ?>
 			
                     <div class="item item-title">
-                        <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
+                        <strong class="item-name "><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
                          <div class="time-bar-wrapper location-time-bar">
                          	<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
                           		<p class="time-bar-times"><span class="time-bar-start"><?php echo $loc['time_start']; ?></span> <span class="time-bar-end"><?php echo $loc['time_end']; ?></span></p>
                           	</div>
                          </div>
-                        <!--<div class="time-bar" style="width:200px">-->
-                            <!--<p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>-->
-                        <!--</div>-->
-                    </div>
+                     </div>
                     <ul class="events">
                     	<?php
 							$sql->bindValue(':location_id', $loc['id'], PDO::PARAM_INT);
@@ -151,15 +148,12 @@ include 'includes/wrapper-top.html';
 				<?php  if(($loc['id']== 3) || ($loc['id']== 4) || ($loc['id']== 5) || ($loc['id']== 6)) { ?>
 			
                     <div class="item item-title">
-                        <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
+                        <strong class="item-name linkmuseums"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
                          <div class="time-bar-wrapper location-time-bar">
                          	<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
                           		<p class="time-bar-times"><span class="time-bar-start"><?php echo $loc['time_start']; ?></span> <span class="time-bar-end"><?php echo $loc['time_end']; ?></span></p>
                           	</div>
                          </div>
-                        <!--<div class="time-bar" style="width:200px">-->
-                            <!--<p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>-->
-                        <!--</div>-->
                     </div>
                     <ul class="events">
                     	<?php
@@ -236,15 +230,15 @@ include 'includes/wrapper-top.html';
 				<?php  if(($loc['id']== 7) || ($loc['id']== 8)) { ?>
 			
                     <div class="item item-title">
-                        <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
-                         <div class="time-bar-wrapper location-time-bar">
-                         	<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
-                          		<p class="time-bar-times"><span class="time-bar-start"><?php echo $loc['time_start']; ?></span> <span class="time-bar-end"><?php echo $loc['time_end']; ?></span></p>
-                          	</div>
-                         </div>
-                        <!--<div class="time-bar" style="width:200px">-->
-                            <!--<p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>-->
-                        <!--</div>-->
+                        <strong class="item-name linkfestivals"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
+						<!--if time is 0 then dont display time bar -->
+						<?php if(!($loc['time_start'] == 0) ||!( $loc['time_end'] == 0))  { ?>
+							 <div class="time-bar-wrapper location-time-bar">
+								<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
+									<p class="time-bar-times"><span class="time-bar-start"><?php echo $loc['time_start']; ?></span> <span class="time-bar-end"><?php echo $loc['time_end']; ?></span></p>
+								</div>
+							 </div>
+						<?php } ?><!--close if condition time = 0 -->
                     </div>
                     <ul class="events">
                     	<?php
@@ -319,18 +313,15 @@ include 'includes/wrapper-top.html';
         	<a class="categorytab entertainment">Entertainment</a>
         	 <ul>
             	<?php foreach($locations as $loc) : ?>
-				<?php  if(($loc['id']== 16) || ($loc['id']== 10) || ($loc['id']== 11) || ($loc['id']== 12)) { ?>
+				<?php  if(($loc['id']== 16) || ($loc['id']== 17) || ($loc['id']== 18) || ($loc['id']== 19)) { ?>
 			
                     <div class="item item-title">
-                        <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
+                        <strong class="item-name linkentertainment"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
                          <div class="time-bar-wrapper location-time-bar">
                          	<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
                           		<p class="time-bar-times"><span class="time-bar-start"><?php echo $loc['time_start']; ?></span> <span class="time-bar-end"><?php echo $loc['time_end']; ?></span></p>
                           	</div>
                          </div>
-                        <!--<div class="time-bar" style="width:200px">-->
-                            <!--<p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>-->
-                        <!--</div>-->
                     </div>
                     <ul class="events">
                     	<?php
@@ -408,15 +399,15 @@ include 'includes/wrapper-top.html';
 				<?php  if(($loc['id']== 9) || ($loc['id']== 10) || ($loc['id']== 11) || ($loc['id']== 12)) { ?>
 			
                     <div class="item item-title">
-                        <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
-                         <div class="time-bar-wrapper location-time-bar">
-                         	<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
-                          		<p class="time-bar-times"><span class="time-bar-start"><?php echo $loc['time_start']; ?></span> <span class="time-bar-end"><?php echo $loc['time_end']; ?></span></p>
-                          	</div>
-                         </div>
-                        <!--<div class="time-bar" style="width:200px">-->
-                            <!--<p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>-->
-                        <!--</div>-->
+                        <strong class="item-name linksites"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
+                        <!--if time is 0 then dont display time bar -->
+						<?php if(!($loc['time_start'] == 0) ||!( $loc['time_end'] == 0))  { ?>
+							<div class="time-bar-wrapper location-time-bar">
+								<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
+									<p class="time-bar-times"><span class="time-bar-start"><?php echo $loc['time_start']; ?></span> <span class="time-bar-end"><?php echo $loc['time_end']; ?></span></p>
+								</div>
+                         	</div>
+						<?php } ?><!--close if condition time = 0 -->
                     </div>
                     <ul class="events">
                     	<?php
@@ -491,15 +482,15 @@ include 'includes/wrapper-top.html';
 				<?php  if(($loc['id']== 13) || ($loc['id']== 14) || ($loc['id']== 15)) { ?>
 			
                     <div class="item item-title">
-                        <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
-                         <div class="time-bar-wrapper location-time-bar">
-                         	<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
-                          		<p class="time-bar-times"><span class="time-bar-start"><?php echo $loc['time_start']; ?></span> <span class="time-bar-end"><?php echo $loc['time_end']; ?></span></p>
-                          	</div>
-                         </div>
-                        <!--<div class="time-bar" style="width:200px">-->
-                            <!--<p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>-->
-                        <!--</div>-->
+                        <strong class="item-name linkleisure"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
+                        <!--if time = 0 then dont display time bar -->
+						<?php if(!($loc['time_start'] == 0) ||!( $loc['time_end'] == 0))  { ?>
+							 <div class="time-bar-wrapper location-time-bar">
+								<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
+									<p class="time-bar-times"><span class="time-bar-start"><?php echo $loc['time_start']; ?></span> <span class="time-bar-end"><?php echo $loc['time_end']; ?></span></p>
+								</div>
+							 </div>
+						<?php } ?><!--close if condition time = 0 -->
                     </div>
                     <ul class="events">
                     	<?php
