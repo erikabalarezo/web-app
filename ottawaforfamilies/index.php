@@ -178,7 +178,7 @@ include 'includes/wrapper-top.html';
                             <div class="item">
 							<!--<strong class="item-name item-name-event">-->
 							
-								<strong class="item-name item-name-event"><a href="locdescription.php?id=<?php echo $loc['id']; ?>">
+								<strong class="item-name item-name-event linkmuseums"><a href="locdescription.php?id=<?php echo $loc['id']; ?>">
 								<?php echo $ev['name']; ?></a></strong>
                                
                                 <div class="time-bar-wrapper">
