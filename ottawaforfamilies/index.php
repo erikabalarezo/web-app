@@ -65,8 +65,8 @@ include 'includes/wrapper-top.html';
 			
             <ul>
             	<?php foreach($locations as $loc) : ?>
-				<?php if (($loc['id']== '1') || ($loc['id']== '2') )?>
-                <li>
+				<?php  if(($loc['id']== 1) || ($loc['id']== 2)) { ?>
+			
                     <div class="item item-title">
                         <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
                          <div class="time-bar-wrapper location-time-bar">
@@ -131,21 +131,26 @@ include 'includes/wrapper-top.html';
 								</ul>
                                                                
                                 
-                                
-							
-							
-							
-								
                            </div><!--end for item-->
                         </li>
                         <?php endforeach; ?> <!--for events-->
                     </ul>
-                </li>
+               
+				<?php //closes if for id=1 and id=2l 
+				} ?>
 				 <!-- added }this but doesnt work-->
-				<?php if ($loc['id']== 'Museums') ?>
-				<li class="category two">
-               		<a class="categorytab museums">Museums</a>
-        			<div class="item item-title">
+				<?php endforeach; ?><!--end of all locations -->
+            </ul>
+        </li> <!--closing category one-->
+        
+        
+		<li class="category two">
+        	<a class="categorytab museums">Museums</a>
+			 <ul>
+            	<?php foreach($locations as $loc) : ?>
+				<?php  if(($loc['id']== 3) || ($loc['id']== 4) || ($loc['id']== 5) || ($loc['id']== 6)) { ?>
+			
+                    <div class="item item-title">
                         <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
                          <div class="time-bar-wrapper location-time-bar">
                          	<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
@@ -156,50 +161,411 @@ include 'includes/wrapper-top.html';
                             <!--<p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>-->
                         <!--</div>-->
                     </div>
-		
-			
-         		</li>
-				
-				
-				
-				
-                <?php endforeach; ?><!--end of all locations -->
+                    <ul class="events">
+                    	<?php
+							$sql->bindValue(':location_id', $loc['id'], PDO::PARAM_INT);
+							$sql->execute();
+							$events = $sql->fetchAll();
+							
+							foreach($events as $ev) :
+						?>
+							<?php  //here put the category equal to galleries
+								if ($ev['rate_count'] > 0) {
+									$rating = round($ev['rate_total'] / $ev['rate_count']);
+								} else {
+									$rating = 0;
+								}
+								
+								
+							?>
+						
+						
+                        <li class="event">
+                            <div class="item">
+							<!--<strong class="item-name item-name-event">-->
+							
+								<strong class="item-name item-name-event"><a href="locdescription.php?id=<?php echo $loc['id']; ?>">
+								<?php echo $ev['name']; ?></a></strong>
+                               
+                                <div class="time-bar-wrapper">
+                                    <div class="time-bar" style="left:<?php echo (($ev['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $ev['time_end']) / $time_diff) * 100; ?>%;">
+                                        <p class="time-bar-times"><span class="time-bar-start"><?php echo $ev['time_start']; ?></span> <span class="time-bar-end"><?php echo $ev['time_end']; ?></span></p>
+                                    </div>
+                                </div>
+								
+								<?php
+									if($ev['paid'] == 0) {
+										$ispaid = 'free';
+									}
+									else {
+										$ispaid = '$';
+									}
+								?>
+								<span class= "pay"><?php echo $ispaid; ?></span>
+								
+								<ul class="rater rater-usable">
+								<?php for ($i = 1; $i <= 5; $i++) : 
+								$class = ($i <= $rating) ? 'is-rated' : '';
+								?>
+							
+                                <li class="rater-level <?php echo $class; ?>"><a href="rate.php?id=<?php echo $ev['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
+                                
+								<?php endfor; ?>
+								</ul>
+                                                               
+                                
+                           </div><!--end for item-->
+                        </li>
+                        <?php endforeach; ?> <!--for events-->
+                    </ul>
+               
+				<?php //closes if for id=3, id=4, id=5, id=6 
+				} ?>
+				 <!-- added }this but doesnt work-->
+				<?php endforeach; ?><!--end of all locations -->
             </ul>
-        </li>
-        
-        
-		<li class="category two">
-        
-        	<a class="categorytab museums">Museums</a>
+        </li> <!--closing category two-->
         	
-         </li>
+        
             
             
 		<li class="category three">
         	<a class="categorytab festivals">Festivals</a>
+        	 <ul>
+            	<?php foreach($locations as $loc) : ?>
+				<?php  if(($loc['id']== 7) || ($loc['id']== 8)) { ?>
+			
+                    <div class="item item-title">
+                        <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
+                         <div class="time-bar-wrapper location-time-bar">
+                         	<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
+                          		<p class="time-bar-times"><span class="time-bar-start"><?php echo $loc['time_start']; ?></span> <span class="time-bar-end"><?php echo $loc['time_end']; ?></span></p>
+                          	</div>
+                         </div>
+                        <!--<div class="time-bar" style="width:200px">-->
+                            <!--<p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>-->
+                        <!--</div>-->
+                    </div>
+                    <ul class="events">
+                    	<?php
+							$sql->bindValue(':location_id', $loc['id'], PDO::PARAM_INT);
+							$sql->execute();
+							$events = $sql->fetchAll();
+							
+							foreach($events as $ev) :
+						?>
+							<?php  //here put the category equal to galleries
+								if ($ev['rate_count'] > 0) {
+									$rating = round($ev['rate_total'] / $ev['rate_count']);
+								} else {
+									$rating = 0;
+								}
+								
+								
+							?>
+						
+						
+                        <li class="event">
+                            <div class="item">
+							<!--<strong class="item-name item-name-event">-->
+							
+								<strong class="item-name item-name-event"><a href="locdescription.php?id=<?php echo $loc['id']; ?>">
+								<?php echo $ev['name']; ?></a></strong>
+                               
+                                <div class="time-bar-wrapper">
+                                    <div class="time-bar" style="left:<?php echo (($ev['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $ev['time_end']) / $time_diff) * 100; ?>%;">
+                                        <p class="time-bar-times"><span class="time-bar-start"><?php echo $ev['time_start']; ?></span> <span class="time-bar-end"><?php echo $ev['time_end']; ?></span></p>
+                                    </div>
+                                </div>
+								
+								<?php
+									if($ev['paid'] == 0) {
+										$ispaid = 'free';
+									}
+									else {
+										$ispaid = '$';
+									}
+								?>
+								<span class= "pay"><?php echo $ispaid; ?></span>
+								
+								<ul class="rater rater-usable">
+								<?php for ($i = 1; $i <= 5; $i++) : 
+								$class = ($i <= $rating) ? 'is-rated' : '';
+								?>
+							
+                                <li class="rater-level <?php echo $class; ?>"><a href="rate.php?id=<?php echo $ev['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
+                                
+								<?php endfor; ?>
+								</ul>
+                                                               
+                                
+                           </div><!--end for item-->
+                        </li>
+                        <?php endforeach; ?> <!--for events-->
+                    </ul>
+               
+				<?php //closes if for id=1 and id=2l 
+				} ?>
+				 <!-- added }this but doesnt work-->
+				<?php endforeach; ?><!--end of all locations -->
+            </ul>
+        </li> <!--closing category three-->
         
-        
-        </li>
+       
 		
         
         
         <li class="category four">
         	<a class="categorytab entertainment">Entertainment</a>
-        	
+        	 <ul>
+            	<?php foreach($locations as $loc) : ?>
+				<?php  if(($loc['id']== 16) || ($loc['id']== 10) || ($loc['id']== 11) || ($loc['id']== 12)) { ?>
+			
+                    <div class="item item-title">
+                        <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
+                         <div class="time-bar-wrapper location-time-bar">
+                         	<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
+                          		<p class="time-bar-times"><span class="time-bar-start"><?php echo $loc['time_start']; ?></span> <span class="time-bar-end"><?php echo $loc['time_end']; ?></span></p>
+                          	</div>
+                         </div>
+                        <!--<div class="time-bar" style="width:200px">-->
+                            <!--<p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>-->
+                        <!--</div>-->
+                    </div>
+                    <ul class="events">
+                    	<?php
+							$sql->bindValue(':location_id', $loc['id'], PDO::PARAM_INT);
+							$sql->execute();
+							$events = $sql->fetchAll();
+							
+							foreach($events as $ev) :
+						?>
+							<?php  //here put the category equal to galleries
+								if ($ev['rate_count'] > 0) {
+									$rating = round($ev['rate_total'] / $ev['rate_count']);
+								} else {
+									$rating = 0;
+								}
+								
+								
+							?>
+						
+						
+                        <li class="event">
+                            <div class="item">
+							<!--<strong class="item-name item-name-event">-->
+							
+								<strong class="item-name item-name-event"><a href="locdescription.php?id=<?php echo $loc['id']; ?>">
+								<?php echo $ev['name']; ?></a></strong>
+                               
+                                <div class="time-bar-wrapper">
+                                    <div class="time-bar" style="left:<?php echo (($ev['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $ev['time_end']) / $time_diff) * 100; ?>%;">
+                                        <p class="time-bar-times"><span class="time-bar-start"><?php echo $ev['time_start']; ?></span> <span class="time-bar-end"><?php echo $ev['time_end']; ?></span></p>
+                                    </div>
+                                </div>
+								
+								<?php
+									if($ev['paid'] == 0) {
+										$ispaid = 'free';
+									}
+									else {
+										$ispaid = '$';
+									}
+								?>
+								<span class= "pay"><?php echo $ispaid; ?></span>
+								
+								<ul class="rater rater-usable">
+								<?php for ($i = 1; $i <= 5; $i++) : 
+								$class = ($i <= $rating) ? 'is-rated' : '';
+								?>
+							
+                                <li class="rater-level <?php echo $class; ?>"><a href="rate.php?id=<?php echo $ev['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
+                                
+								<?php endfor; ?>
+								</ul>
+                                                               
+                                
+                           </div><!--end for item-->
+                        </li>
+                        <?php endforeach; ?> <!--for events-->
+                    </ul>
+               
+				<?php //closes if for id=1 and id=2l 
+				} ?>
+				 <!-- added }this but doesnt work-->
+				<?php endforeach; ?><!--end of all locations -->
+            </ul>
+        </li> <!--closing category four Entertainment-->
         
         
         
-        </li>
+       
         
 		<li class="category five">
         	<a class="categorytab sites">Sites</a>
-        	
+        	 <ul>
+            	<?php foreach($locations as $loc) : ?>
+				<?php  if(($loc['id']== 9) || ($loc['id']== 10) || ($loc['id']== 11) || ($loc['id']== 12)) { ?>
+			
+                    <div class="item item-title">
+                        <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
+                         <div class="time-bar-wrapper location-time-bar">
+                         	<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
+                          		<p class="time-bar-times"><span class="time-bar-start"><?php echo $loc['time_start']; ?></span> <span class="time-bar-end"><?php echo $loc['time_end']; ?></span></p>
+                          	</div>
+                         </div>
+                        <!--<div class="time-bar" style="width:200px">-->
+                            <!--<p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>-->
+                        <!--</div>-->
+                    </div>
+                    <ul class="events">
+                    	<?php
+							$sql->bindValue(':location_id', $loc['id'], PDO::PARAM_INT);
+							$sql->execute();
+							$events = $sql->fetchAll();
+							
+							foreach($events as $ev) :
+						?>
+							<?php  //here put the category equal to galleries
+								if ($ev['rate_count'] > 0) {
+									$rating = round($ev['rate_total'] / $ev['rate_count']);
+								} else {
+									$rating = 0;
+								}
+								
+								
+							?>
+						
+						
+                        <li class="event">
+                            <div class="item">
+							<!--<strong class="item-name item-name-event">-->
+							
+								<strong class="item-name item-name-event"><a href="locdescription.php?id=<?php echo $loc['id']; ?>">
+								<?php echo $ev['name']; ?></a></strong>
+                               
+                                <div class="time-bar-wrapper">
+                                    <div class="time-bar" style="left:<?php echo (($ev['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $ev['time_end']) / $time_diff) * 100; ?>%;">
+                                        <p class="time-bar-times"><span class="time-bar-start"><?php echo $ev['time_start']; ?></span> <span class="time-bar-end"><?php echo $ev['time_end']; ?></span></p>
+                                    </div>
+                                </div>
+								
+								<?php
+									if($ev['paid'] == 0) {
+										$ispaid = 'free';
+									}
+									else {
+										$ispaid = '$';
+									}
+								?>
+								<span class= "pay"><?php echo $ispaid; ?></span>
+								
+								<ul class="rater rater-usable">
+								<?php for ($i = 1; $i <= 5; $i++) : 
+								$class = ($i <= $rating) ? 'is-rated' : '';
+								?>
+							
+                                <li class="rater-level <?php echo $class; ?>"><a href="rate.php?id=<?php echo $ev['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
+                                
+								<?php endfor; ?>
+								</ul>
+                                                               
+                                
+                           </div><!--end for item-->
+                        </li>
+                        <?php endforeach; ?> <!--for events-->
+                    </ul>
+               
+				<?php //closes if for id=1 and id=2l 
+				} ?>
+				 <!-- added }this but doesnt work-->
+				<?php endforeach; ?><!--end of all locations -->
+            </ul>
+        </li> <!--closing category five Sites-->
         
-        </li>
+       
 		<li class="category six">
         	<a class="categorytab leisure">Leisure</a>
-        	
-        </li>
+        	 <ul>
+            	<?php foreach($locations as $loc) : ?>
+				<?php  if(($loc['id']== 13) || ($loc['id']== 14) || ($loc['id']== 15)) { ?>
+			
+                    <div class="item item-title">
+                        <strong class="item-name"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
+                         <div class="time-bar-wrapper location-time-bar">
+                         	<div class="time-bar" style="left:<?php echo (($loc['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $loc['time_end']) / $time_diff) * 100; ?>%;">
+                          		<p class="time-bar-times"><span class="time-bar-start"><?php echo $loc['time_start']; ?></span> <span class="time-bar-end"><?php echo $loc['time_end']; ?></span></p>
+                          	</div>
+                         </div>
+                        <!--<div class="time-bar" style="width:200px">-->
+                            <!--<p class="time-bar-times"><span class="time-bar-start">10:00</span> <span class="time-bar-end">5:00</span></p>-->
+                        <!--</div>-->
+                    </div>
+                    <ul class="events">
+                    	<?php
+							$sql->bindValue(':location_id', $loc['id'], PDO::PARAM_INT);
+							$sql->execute();
+							$events = $sql->fetchAll();
+							
+							foreach($events as $ev) :
+						?>
+							<?php  //here put the category equal to galleries
+								if ($ev['rate_count'] > 0) {
+									$rating = round($ev['rate_total'] / $ev['rate_count']);
+								} else {
+									$rating = 0;
+								}
+								
+								
+							?>
+						
+						
+                        <li class="event">
+                            <div class="item">
+							<!--<strong class="item-name item-name-event">-->
+							
+								<strong class="item-name item-name-event"><a href="locdescription.php?id=<?php echo $loc['id']; ?>">
+								<?php echo $ev['name']; ?></a></strong>
+                               
+                                <div class="time-bar-wrapper">
+                                    <div class="time-bar" style="left:<?php echo (($ev['time_start'] - $min_start_time) / $time_diff) * 100; ?>%;right:<?php echo (($max_end_time - $ev['time_end']) / $time_diff) * 100; ?>%;">
+                                        <p class="time-bar-times"><span class="time-bar-start"><?php echo $ev['time_start']; ?></span> <span class="time-bar-end"><?php echo $ev['time_end']; ?></span></p>
+                                    </div>
+                                </div>
+								
+								<?php
+									if($ev['paid'] == 0) {
+										$ispaid = 'free';
+									}
+									else {
+										$ispaid = '$';
+									}
+								?>
+								<span class= "pay"><?php echo $ispaid; ?></span>
+								
+								<ul class="rater rater-usable">
+								<?php for ($i = 1; $i <= 5; $i++) : 
+								$class = ($i <= $rating) ? 'is-rated' : '';
+								?>
+							
+                                <li class="rater-level <?php echo $class; ?>"><a href="rate.php?id=<?php echo $ev['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
+                                
+								<?php endfor; ?>
+								</ul>
+                                                               
+                                
+                           </div><!--end for item-->
+                        </li>
+                        <?php endforeach; ?> <!--for events-->
+                    </ul>
+               
+				<?php //closes if for id=3, id=4, id=5, id=6 
+				} ?>
+				 <!-- added }this but doesnt work-->
+				<?php endforeach; ?><!--end of all locations -->
+            </ul>
+        </li> <!--closing category two-->
+        
 	</ul>
 <!--bottom app from here -->	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
