@@ -3,7 +3,7 @@
 require_once 'includes/db.php';
 require_once 'includes/functions.php';
 session_start();
-
+//'id'
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 if (empty($id)) {
