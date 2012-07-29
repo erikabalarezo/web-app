@@ -268,7 +268,7 @@ leisure:visited {
 .item-name a {
 	padding-left:0.5em;
 	text-decoration:none;
-	
+	color: #000;
 }
 .item-name a:hover,	
 .item-name a:focus {
@@ -276,20 +276,42 @@ leisure:visited {
 }
 
 
-/*.item-name-event {
-	margin-left:1em;
-	padding:0;
-	width: 46.9%;
-	float:left;
-}*/
 .item-name-event {
     float: left;
     margin-left: 1em;
     padding-left: 0;
     width: 40.9%;
 }
+/*links for museums = yellow */
+.linkmuseums a:hover,
+.linkmuseums a:focus {
+	/*color:#F9E853; too light*/
+	color:#EACF11;
+}
 
+/*links for festivals = green */
+.linkfestivals a:hover,
+.linkfestivals a:focus {
+	color: #8CC63F;
+}
 
+/*links for entertainment = orange */
+.linkentertainment a:hover,
+.linkentertainment a:focus {
+	color: #FF8040;
+}
+
+/*links for sites = turquise */
+.linksites a:hover,
+.linksites a:focus {
+	color: #1BE2E2;
+}
+
+/*links for leisure = blue */
+.linkleisure a:hover,
+.linkleisure a:focus {
+	color: #8DABFF;
+}
 .events {
 	border-top:2px solid #FFFFFF;
 }
