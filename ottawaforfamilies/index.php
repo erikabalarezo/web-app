@@ -9,7 +9,7 @@ $max_end_time = 23;
 $time_diff = $max_end_time - $min_start_time;
 
 $location_sql = $db->prepare('
-	SELECT id, name, time_start, time_end, category
+	SELECT id, name, time_start, time_end, category, rate_count, rate_total, paid
 	FROM off_location
 	WHERE category = :category
 	ORDER BY name ASC
