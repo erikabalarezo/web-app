@@ -14,7 +14,43 @@
 								</div>
 							 </div>
 						<?php } ?><!--close if condition time = 0 -->
-                    </div>
+                    
+	                    <?php
+									if($loc['paid'] == 0) {
+										$ispaid = 'free';
+									}
+									else {
+										$ispaid = '$';
+									}
+						?>
+								<span class= "pay"><?php echo $ispaid; ?></span>
+                    
+                    
+                    
+                    <!--adding rating for each location-->
+                    <?php  //here put the category equal to galleries
+								if ($loc['rate_count'] > 0) {
+									$rating = round($loc['rate_total'] / $loc['rate_count']);
+								} else {
+									$rating = 0;
+								}
+								
+								
+					?>
+			                    <ul class="rater rater-usable">
+								<?php for ($i = 1; $i <= 5; $i++) : 
+								$class = ($i <= $rating) ? 'is-rated' : '';
+								?>
+							
+                                <li class="rater-level <?php echo $class; ?>"><a href="rate.php?id=<?php echo $loc['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
+                                
+								<?php endfor; ?>
+								</ul>
+                     </div>
+                    
+                    
+                    <!---------------------------------------->
+                    
                     <ul class="events">
                     	<?php
 							$event_sql->bindValue(':location_id', $loc['id'], PDO::PARAM_INT);
