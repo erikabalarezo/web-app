@@ -55,23 +55,16 @@ form {
 	padding:0;
 }
 
-/*.time-detail {
-    background-color: #99CC99;
-    margin-left: 42%;
-    width: 32%;
-	float: left;
-	*//*border-bottom: 5px solid #F7931E;*/
-	
-/*}*/
+
 
 .time-detail {
-    /*background-color: #99CC99;*/
+    border-bottom: 5px solid #F7931E;
     float: left;
     margin-left: 36.7%;
-	padding-top:1em;
+    padding-top: 0;
     width: 34%;
-	border-bottom: 5px solid #F7931E;
 }
+
 .am {
 	text-align: left;
 	width:6em;
@@ -86,7 +79,7 @@ form {
 
 .pm {
     /*background-color: #993399;*/
-    margin-left: 46%;
+    margin-left: 44%;
     
 }
 
@@ -291,10 +284,10 @@ leisure:visited {
 
 
 .item-name-event {
-    float: left;
+  
     /*margin-left: 1em;*/
     padding-left: 0;
-    width: 40.9%;
+  
 }
 /*links for museums = yellow */
 .linkmuseums a:hover,
@@ -338,8 +331,8 @@ leisure:visited {
 }
 
 .category ul li {
-	margin:0;
-	padding: 0;
+    margin: 0;
+    padding-bottom: 1px;
 }
 
 .location-time-bar {
@@ -382,7 +375,9 @@ leisure:visited {
 	list-style-type:none;
 	margin:0;
 	padding:0;
-	
+	position: absolute;
+	right: 2em;
+	top: 0;
 	/*erika added*/
 	
 	margin-left: 3%;
@@ -408,7 +403,9 @@ leisure:visited {
 
 .pay {
     color: #8CC63F;
-    margin-left: 33%;
+	position: absolute;
+	right: 15em;
+	top: 0;
 }
 
 /*style for detail info of a location*/
