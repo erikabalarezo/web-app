@@ -186,33 +186,33 @@ leisure:visited {
 }
 
 /*galleries*/
-.one {
+.cat-galleries {
     border-left: 8px solid #FF00FF;
     clear: both;
     padding-bottom: 1px;
 }
 /*museums*/
-.two {
+.cat-museums {
 	border-left:8px solid #F9E853;
 }
 
 /*festivals*/
-.three {
+.cat-festivals {
 	border-left:8px solid #8CC63F;
 }
 
 /*entertainment*/
-.four {
+.cat-entertainment {
 	border-left:8px solid #FF8040;
 }
 
 /*sites*/
-.five {
+.cat-sites {
 	border-left:8px solid #1be2e2;;
 }
 
 /*leisure*/
-.six {
+.cat-leisure {
 	border-left:8px solid #8dAbFF;
 }
 
@@ -278,7 +278,7 @@ leisure:visited {
 
 .item-name-event {
     float: left;
-    margin-left: 1em;
+    /*margin-left: 1em;*/
     padding-left: 0;
     width: 40.9%;
 }
