@@ -134,6 +134,15 @@ form {
 	padding-left: 3em;
 	
 }
+.museums {
+	margin-bottom: 1em;
+    padding-left: 2.5em;
+}
+	/*background-image:url(../images/museumsicon1.png);*/
+.festivals, .entertainment, .sites, .leisure {
+	margin-bottom: 1em;
+    padding-left: 2.5em;
+}
 
 .galleries:link,
 .galleries:visited,
@@ -194,6 +203,9 @@ leisure:visited {
 /*museums*/
 .cat-museums {
 	border-left:8px solid #F9E853;
+	background: #E6E6E6 url(../images/museumsicon1.png) top left no-repeat;
+	
+	
 }
 
 /*festivals*/
@@ -204,6 +216,7 @@ leisure:visited {
 /*entertainment*/
 .cat-entertainment {
 	border-left:8px solid #FF8040;
+	background: #E6E6E6 url(../images/entertainmenticon.png) top left no-repeat;
 }
 
 /*sites*/
@@ -214,6 +227,7 @@ leisure:visited {
 /*leisure*/
 .cat-leisure {
 	border-left:8px solid #8dAbFF;
+	background: #E6E6E6 url(../images/leisureicon.png) top left no-repeat;
 }
 
 
