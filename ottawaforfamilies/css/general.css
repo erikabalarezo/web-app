@@ -356,6 +356,7 @@ leisure:visited {
 	margin:0;
 	padding:0;
 	background-color: #f5f7f7;
+	min-width: 6em;
 }
 
 .time-bar-end {
