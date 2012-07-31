@@ -190,6 +190,8 @@ leisure:visited {
 /*galleries*/
 .cat-galleries {
     border-left: 8px solid #FF00FF;
+	background: #E6E6E6 url(../images/galleriesicon.png) top left no-repeat;
+	
     clear: both;
     padding-bottom: 1px;
 }
@@ -204,6 +206,7 @@ leisure:visited {
 /*festivals*/
 .cat-festivals {
 	border-left:8px solid #8CC63F;
+	background: #E6E6E6 url(../images/festivalicon.png) top left no-repeat;
 }
 
 /*entertainment*/
@@ -214,7 +217,8 @@ leisure:visited {
 
 /*sites*/
 .cat-sites {
-	border-left:8px solid #1be2e2;;
+	border-left:8px solid #1be2e2;
+	background: #E6E6E6 url(../images/sitesicon.png) top left no-repeat;
 }
 
 /*leisure*/
@@ -243,13 +247,17 @@ leisure:visited {
 */
 .item {
     background-color: #F5F7F7;
-    border-radius: 20px 20px 20px 20px;
+    /*border-radius: 20px 20px 20px 20px;*/
     clear: both;
     margin-bottom: 4px;
     margin-left: 2em;
     margin-top: 4px;
     padding: 0 0 0 0.5em;
     position: relative;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	
 }
 
 
