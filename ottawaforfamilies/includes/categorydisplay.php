@@ -5,7 +5,7 @@
             	<?php foreach($locations as $loc) : ?>
                 
                     <div class="item item-title">
-                        <strong class="item-name linkfestivals"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
+                        <strong class="item-name link<?php echo strtolower($cat); ?>"><a href="locdescription.php?id=<?php echo $loc['id']; ?>&acategory=<?php echo strtolower($cat); ?>"><?php echo $loc['name']; ?></a></strong>
 						<!--if time is 0 then dont display time bar -->
 						<?php if(!($loc['time_start'] == 0) ||!( $loc['time_end'] == 0))  { ?>
 							 <div class="time-bar-wrapper location-time-bar">
@@ -74,7 +74,7 @@
                             <div class="item">
 							<!--<strong class="item-name item-name-event">-->
 							
-								<strong class="item-name item-name-event"><a href="locdescription.php?id=<?php echo $loc['id']; ?>">
+								<strong class="item-name item-name-event link<?php echo strtolower($cat); ?>"><a href="locdescription.php?id=<?php echo $loc['id']; ?>">
 								<?php echo $ev['name']; ?></a></strong>
                                
                                 <div class="time-bar-wrapper">
