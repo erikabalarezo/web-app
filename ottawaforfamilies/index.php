@@ -36,7 +36,7 @@ $event_sql = $db->prepare('
 $event_sql->bindValue(':date', $date, PDO::PARAM_STR);
 
 include 'includes/wrapper-top.html';
-//lkjkj
+
 ?>
 	<div class="locationdetail">
 	    <!--<div class="time-bar-wrapper">-->
