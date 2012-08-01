@@ -5,6 +5,8 @@ require_once 'includes/functions.php';
 session_start();
 //'id'
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+//added this line to test style
+$acategory = filter_input(INPUT_GET, 'acategory', FILTER_SANITIZE_STRING);
 
 if (empty($id)) {
 	header('Location: index.php');
@@ -46,16 +48,17 @@ include 'includes/wrapper-top.html';
 
 
 ?>
-
+<!--added this line to test style of inside pages-->
+<div class = "all<?php echo $acategory; ?>">
 
 <?php foreach($details as $det) : ?>
 	<h1><?php echo $det['name']; ?></h1>
 	<p><?php echo $det['description']; ?></p>
-	<?php foreach($evdetails as $evdet) : ?>
+	<?php foreach($evdetails as $evdet) : { ?>
 		<?php $category = $evdet['category']; ?>
 		
 		<h2><?php echo $evdet['name']; ?></h1>
-		<p><?php echo $evdet['description']; ?></p>
+		<p><?php echo $evdet['description']; } ?></p>
 	<?php endforeach; ?>
 <?php endforeach; ?>
 <?php
