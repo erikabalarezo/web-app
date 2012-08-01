@@ -249,7 +249,7 @@ leisure:visited {
     background-color: #F5F7F7;
     /*border-radius: 20px 20px 20px 20px;*/
     clear: both;
-    margin-bottom: 4px;
+    /*margin-bottom: 4px;*/
     margin-left: 2em;
     margin-top: 4px;
     padding: 0 0 0 0.5em;
@@ -260,16 +260,23 @@ leisure:visited {
 	
 }
 
+.item-title {
+    margin-bottom: 4px;
+    margin-left: 1em;
+    margin-top: 4px;
+    padding: 0;
+}
 
 
 
-
-
+/*
 .item-title {
 	margin-left:1em;
 	padding:0;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
-
+*/
 
 .item-name {
 	/*margin:2px 0;*/
@@ -287,7 +294,7 @@ leisure:visited {
 }
 .item-name a:hover,	
 .item-name a:focus {
-	color:#FF00FF;
+	/*color:#FF00FF;*/
 }
 
 
@@ -296,6 +303,13 @@ leisure:visited {
     /*margin-left: 1em;*/
     padding-left: 0;
   
+}
+
+
+/*links for galleries = pink */
+.linkgalleries a:hover,
+.linkgalleries a:focus {
+	color:#FF00FF;
 }
 /*links for museums = yellow */
 .linkmuseums a:hover,
@@ -328,13 +342,17 @@ leisure:visited {
 	color: #8DABFF;
 }
 .events {
-	border-top:2px solid #FFFFFF;
+	/*fixed this at home, might look different at school
+	border-top:2px solid #FFFFFF; */
+	border-bottom: 2px solid #FFFFFF;
+	
 }
 .category ul {
 	list-style-type: none;
 	/*these 2 lines to get rid of spaces on the side*/
 	/*margin: 0;*/
 	padding: 0;
+	padding-bottom:2px;
 	
 }
 
@@ -417,10 +435,60 @@ leisure:visited {
 }
 
 /*style for detail info of a location*/
-.nationalgallery {
-	background-color:  #F5F7F7;
+.allgalleries {
+	background-color:#E6E6E6;
+	/*background-color:  #F5F7F7;*/
 	border-top: 1px solid #ffffff;
 	padding-left: 1em;
 	border-left:8px solid #FF00FF;
+	padding-bottom:1em;
+}
+
+/*style for detail info of museums */
+.allmuseums {
+	background-color:#E6E6E6;
+	/*background-color:  #F5F7F7;*/
+	border-top: 1px solid #ffffff;
+	padding-left: 1em;
+	border-left:8px solid #F9E853;
+	padding-bottom:1em;
+}
+/*style for detail info of festivals */
+.allfestivals {
+	background-color:#E6E6E6;
+	/*background-color:  #F5F7F7;*/
+	border-top: 1px solid #ffffff;
+	padding-left: 1em;
+	border-left:8px solid #8CC63F;
+	padding-bottom:1em;
+}
+
+/*style for detail info of sites */
+.allsites {
+	background-color:#E6E6E6;
+	/*background-color:  #F5F7F7;*/
+	border-top: 1px solid #ffffff;
+	padding-left: 1em;
+	border-left:8px solid #1BE2E2;
+	padding-bottom:1em;
+}
+
+/*style for detail info of entertainment */
+.allentertainment {
+	background-color:#E6E6E6;
+	/*background-color:  #F5F7F7;*/
+	border-top: 1px solid #ffffff;
+	padding-left: 1em;
+	border-left:8px solid #FF8040;
+	padding-bottom:1em;
+}
+
+/*style for detail info of leisure */
+.allleisure {
+	background-color:#E6E6E6;
+	/*background-color:  #F5F7F7;*/
+	border-top: 1px solid #ffffff;
+	padding-left: 1em;
+	border-left:8px solid #8DABFF;
 	padding-bottom:1em;
 }
