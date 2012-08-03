@@ -5,8 +5,6 @@ require_once 'includes/functions.php';
 session_start();
 //'id'
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
-//added this line to test style
-$acategory = filter_input(INPUT_GET, 'acategory', FILTER_SANITIZE_STRING);
 
 if (empty($id)) {
 	header('Location: index.php');
@@ -14,16 +12,16 @@ if (empty($id)) {
 }
 
 $sql = $db->prepare('
-SELECT name, description
+SELECT name, description, category
 FROM off_location
 WHERE id = :id
 ');
 $sql->bindValue(':id', $id, PDO::PARAM_INT);
 $sql->execute();
-$details= $sql->fetchALL();
+$details= $sql->fetch();
 
 $sql = $db->prepare('
-	SELECT location_id, category, name, description
+	SELECT location_id, name, description
 	FROM off_event
 	WHERE location_id = :id AND :date BETWEEN start_date AND end_date
 ');
@@ -44,23 +42,25 @@ exit;
 header('Location: index.php');
 exit;
 }*/
-include 'includes/wrapper-top.html';
+$inside = true;
+include 'includes/wrapper-top.php';
 
 
 ?>
 <!--added this line to test style of inside pages-->
-<div class = "all<?php echo $acategory; ?>">
+<div class = "all<?php echo strtolower($details['category']); ?>">
 
-<?php foreach($details as $det) : ?>
-	<h1><?php echo $det['name']; ?></h1>
-	<p><?php echo $det['description']; ?></p>
+
+	<h1><?php echo $details['name']; ?></h1>
+	<p><?php echo $details['description']; ?></p>
 	<?php foreach($evdetails as $evdet) : { ?>
-		<?php $category = $evdet['category']; ?>
 		
-		<h2><?php echo $evdet['name']; ?></h1>
+		
+		<h2><?php echo $evdet['name']; ?></h2>
 		<p><?php echo $evdet['description']; } ?></p>
 	<?php endforeach; ?>
-<?php endforeach; ?>
+
+</div>
 <?php
 
 //include 'includes/app-bottom.php';
