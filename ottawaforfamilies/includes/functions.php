@@ -15,7 +15,7 @@
 * Or, translated:
 * id:rate;id:rate;id:rate
 */
-function save_rate_cookie ($id, $rate) {
+function save_rate_cookie ($cookie_name, $id, $rate) {
 $cookie = get_rate_cookie();
 
 $rated = array();
@@ -30,7 +30,7 @@ $cookie_content = implode(';', $rated);
 // http://php.net/setcookie
 // setcookie($name, $content, $expiry_time, $path);
 // Cookie expirations are in seconds
-setcookie('event_rated', $cookie_content, time() + 60 * 60 * 24 * 365, '/');
+setcookie($cookie_name, $cookie_content, time() + 60 * 60 * 24 * 365, '/');
 }
 
 /**
@@ -45,8 +45,8 @@ setcookie('event_rated', $cookie_content, time() + 60 * 60 * 24 * 365, '/');
 * , id => rate
 * )
 */
-function get_rate_cookie () {
-$cookie_content = filter_input(INPUT_COOKIE, 'event_rated', FILTER_SANITIZE_STRING);
+function get_rate_cookie ($cookie_name) {
+$cookie_content = filter_input(INPUT_COOKIE, $cookie_name, FILTER_SANITIZE_STRING);
 
 if (empty($cookie_content)) {
 return array();
