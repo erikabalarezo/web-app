@@ -5,7 +5,7 @@
             	<?php foreach($locations as $loc) : ?>
                 
                     <div class="item item-title">
-                        <strong class="item-name link<?php echo strtolower($cat); ?>"><a href="locdescription.php?id=<?php echo $loc['id']; ?>&acategory=<?php echo strtolower($cat); ?>"><?php echo $loc['name']; ?></a></strong>
+                        <strong class="item-name link<?php echo strtolower($cat); ?>"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
 						<!--if time is 0 then dont display time bar -->
 						<?php if(!($loc['time_start'] == 0) ||!( $loc['time_end'] == 0))  { ?>
 							 <div class="time-bar-wrapper location-time-bar">
@@ -28,7 +28,7 @@
                     
                     
                     <!--adding rating for each location-->
-                    <?php  //here put the category equal to galleries
+                    <?php
 								if ($loc['rate_count'] > 0) {
 									$rating = round($loc['rate_total'] / $loc['rate_count']);
 								} else {
@@ -42,7 +42,7 @@
 								$class = ($i <= $rating) ? 'is-rated' : '';
 								?>
 							
-                                <li class="rater-level <?php echo $class; ?>"><a href="rate.php?id=<?php echo $loc['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
+                                <li class="rater-level <?php echo $class; ?>"><a href="rate-location.php?id=<?php echo $loc['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
                                 
 								<?php endfor; ?>
 								</ul>
@@ -98,7 +98,7 @@
 								$class = ($i <= $rating) ? 'is-rated' : '';
 								?>
 							
-                                <li class="rater-level <?php echo $class; ?>"><a href="rate.php?id=<?php echo $ev['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
+                                <li class="rater-level <?php echo $class; ?>"><a href="rate-event.php?id=<?php echo $ev['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
                                 
 								<?php endfor; ?>
 								</ul>
@@ -111,5 +111,5 @@
                
 				<?php endforeach; ?><!--end of all locations -->
             </ul>
-        </li> <!--closing category three-->
+        </li> <!--closing category -->
         
