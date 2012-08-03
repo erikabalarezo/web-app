@@ -8,15 +8,8 @@ $min_start_time = 8;
 $max_end_time = 23;
 $time_diff = $max_end_time - $min_start_time;
 
-$location_sql = $db->prepare('
-	SELECT id, name, time_start, time_end, category, rate_count, rate_total, paid
-	FROM off_location
-	WHERE category = :category
-	ORDER BY name ASC
-');
-
 $date = filter_input(INPUT_POST, 'date', FILTER_SANITIZE_STRING);
-var_dump($date);
+
 if(empty($date)) {
 	$date = $_SESSION['date'];
 	//echo 'today';
@@ -25,6 +18,20 @@ else {
 	$date = date('Y-m-d', strtotime($date));
 	//var_dump($date);
 }
+
+
+
+$location_sql = $db->prepare('
+	SELECT id, name, time_start, time_end, category, rate_count, rate_total, paid, start_date, end_date
+	FROM off_location
+	WHERE category = :category
+	AND (
+		(start_date <= :date AND end_date >= :date)
+		OR start_date = "0000-00-00"
+	)
+	ORDER BY name ASC
+');
+$location_sql->bindValue(':date', $date, PDO::PARAM_STR);
 
 $event_sql = $db->prepare('
 	SELECT id, start_date, end_date, time_start, time_end, name, rate_count, rate_total, paid
@@ -35,7 +42,7 @@ $event_sql = $db->prepare('
 ');
 $event_sql->bindValue(':date', $date, PDO::PARAM_STR);
 
-include 'includes/wrapper-top.html';
+include 'includes/wrapper-top.php';
 
 ?>
 	<div class="locationdetail">
