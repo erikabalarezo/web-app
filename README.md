@@ -2,7 +2,12 @@ Web-app
 =======
 # Ottawa For Families
 
-Ottawa For Families is a fun and easy to manage application that allows users to find family-oriented  locations or events in Ottawa. It is oriented to all families with children. It is accessible for mobile devices and also desktops. 
+- Ottawa For Families is an application that allows users to find family-oriented  locations or events in Ottawa. It is oriented to all families with children.
+
+## How to use it
+- Enter a date in any format.(i.e. today, tomorrow, YYYY-MM-DD)
+## Features  
+- It is accessible for mobile devices and also desktops. 
 
 Data sources: 
 
