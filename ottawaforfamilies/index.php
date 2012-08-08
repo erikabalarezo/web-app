@@ -75,6 +75,6 @@ include 'includes/wrapper-top.php';
 	</ul>
 <!--bottom app from here -->	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<!--<script src="js/date-validation.js"></script>-->
+	<script src="js/toggle-events.js"></script>
 </body>
 </html>
