@@ -53,7 +53,7 @@
                     
                     <!---------------------------------------->
                     
-                    <ul class="events events-<?php echo $loc['name']; ?>"</ul><!--this code doesnt work-->
+                    <ul class="events events<?php echo $loc['name']; ?>"</ul><!--this code doesnt work-->
                     	<?php
 							$event_sql->bindValue(':location_id', $loc['id'], PDO::PARAM_INT);
 							$event_sql->execute();
