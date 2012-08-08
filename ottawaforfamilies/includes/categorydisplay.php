@@ -6,6 +6,8 @@
                 
                     <div class="item item-title">
                         <strong class="item-name link<?php echo strtolower($cat); ?>"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
+						<img class="<?php echo $loc['name']; ?>" src="images/bigtogglebutton.png" />
+						
 						<!--if time is 0 then dont display time bar -->
 						<?php if(!($loc['time_start'] == 0) ||!( $loc['time_end'] == 0))  { ?>
 							 <div class="time-bar-wrapper location-time-bar">
