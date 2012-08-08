@@ -6,7 +6,7 @@
                 
                     <div class="item item-title">
                         <strong class="item-name link<?php echo strtolower($cat); ?>"><a href="locdescription.php?id=<?php echo $loc['id']; ?>"><?php echo $loc['name']; ?></a></strong>
-						<img id="toggle" class="<?php echo $loc['name']; ?>" src="images/bigtogglebutton.png" />
+						<img class="toggle" data-location="<?php echo $loc['id']; ?>" src="images/bigtogglebutton.png" />
 						
 						<!--if time is 0 then dont display time bar -->
 						<?php if(!($loc['time_start'] == 0) ||!( $loc['time_end'] == 0))  { ?>
@@ -53,7 +53,7 @@
                     
                     <!---------------------------------------->
                     
-                    <ul class="events events<?php echo $loc['name']; ?>"</ul><!--this code doesnt work-->
+                    <ul class="events" data-location-events="<?php echo $loc['id']; ?>"><!--this code doesnt work-->
                     	<?php
 							$event_sql->bindValue(':location_id', $loc['id'], PDO::PARAM_INT);
 							$event_sql->execute();
