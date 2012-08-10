@@ -1,9 +1,19 @@
 <?php
-
+/**
+ * Small description of this file:
+ * Manages locations and events for a specific date.
+ *
+ *use the tags available in phpdoc.org
+ *@author Erika Balarezo <erikabalarezo@yahoo.com>
+ *@copyright 2012 Erika Balarezo
+ *@license BSD-3-Clause http://opensource.org/licenses/BSD-3-Clause 
+ *@version 1.0.0
+ *@package ottawaforfamilies 
+ */
 require_once 'includes/db.php';
 require_once 'includes/functions.php';
 session_start();
-//'id'
+
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 if (empty($id)) {
@@ -30,21 +40,13 @@ $sql->bindValue(':date', $_SESSION['date'], PDO::PARAM_STR);
 $sql->execute();
 $evdetails= $sql->fetchALL();
 
-
-//print_r($details);
-//print_r($evdetails);
-
 if (empty($details)) {
 header('Location: index.php');
 exit;
 }
-/*if (empty($evdetails)) {
-header('Location: index.php');
-exit;
-}*/
+
 $inside = true;
 include 'includes/wrapper-top.php';
-
 
 ?>
 <!--added this line to test style of inside pages-->

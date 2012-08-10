@@ -1,5 +1,15 @@
 <?php
-
+/**
+ * Small description of this file:
+ * Rates events
+ *
+ *use the tags available in phpdoc.org
+ *@author Erika Balarezo <erikabalarezo@yahoo.com>
+ *@copyright 2012 Erika Balarezo
+ *@license BSD-3-Clause http://opensource.org/licenses/BSD-3-Clause 
+ *@version 1.0.0
+ *@package ottawaforfamilies 
+ */
 require_once 'includes/db.php';
 require_once 'includes/functions.php';
 
@@ -20,15 +30,6 @@ if (isset($cookie[$id]) || $rate < 0 || $rate > 5) {
 header('Location: index.php');
 exit;
 }
-
-//if ($dino['rate_count'] > 0) {
-//$rating = round($dino['rate_total'] / $dino['rate_count']);
-//} else {
-//$rating = 0;
-//}
-
-
-
 
 $sql = $db->prepare('
 UPDATE off_event

@@ -1,4 +1,15 @@
 <?php
+/**
+ * Small description of this file:
+ * Checks the date
+ *
+ *use the tags available in phpdoc.org
+ *@author Erika Balarezo <erikabalarezo@yahoo.com>
+ *@copyright 2012 Erika Balarezo
+ *@license BSD-3-Clause http://opensource.org/licenses/BSD-3-Clause 
+ *@version 1.0.0
+ *@package ottawaforfamilies 
+ */
 require_once 'includes/db.php';
 
 

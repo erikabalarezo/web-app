@@ -1,4 +1,16 @@
-     
+<?
+/**
+ * Small description of this file:
+ * Displays categories: locations and their events
+ *
+ *use the tags available in phpdoc.org
+ *@author Erika Balarezo <erikabalarezo@yahoo.com>
+ *@copyright 2012 Erika Balarezo
+ *@license BSD-3-Clause http://opensource.org/licenses/BSD-3-Clause 
+ *@version 1.0.0
+ *@package ottawaforfamilies 
+ */     
+ ?>
 		<li class="category cat-<?php echo strtolower($cat); ?>">
         	<a class="categorytab <?php echo strtolower($cat); ?>"><?php echo $cat; ?></a>
         	 <ul>

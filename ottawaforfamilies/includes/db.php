@@ -1,6 +1,15 @@
 <?php
-//Opens a dconnection to the MYSQL databse
-//Shared beteween all the pHP files in our application
+/**
+ * Small description of this file:
+ * Opens a connection to the MySql database
+ *
+ *use the tags available in phpdoc.org
+ *@author Erika Balarezo <erikabalarezo@yahoo.com>
+ *@copyright 2012 Erika Balarezo
+ *@license BSD-3-Clause http://opensource.org/licenses/BSD-3-Clause 
+ *@version 1.0.0
+ *@package ottawaforfamilies 
+ */
 
 $user = getenv('MYSQL_USERNAME');
 $pass = getenv('MYSQL_PASSWORD');
